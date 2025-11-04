@@ -1,0 +1,8 @@
+# CoDIR IA public release
+venv/
+.env
+__pycache__/
+*.log
+*.tmp
+outputs/*
+!.gitkeep
