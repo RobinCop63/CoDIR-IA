@@ -10,7 +10,7 @@
 \
 ![Status](https://img.shields.io/badge/status-Public%20Release%20v1.0.0-brightgreen)\
 ![Platform](https://img.shields.io/badge/platform-Windows-blue)\
-![License](https://img.shields.io/badge/license-Apache%202.0-lightgrey)\
+!![License](https://img.shields.io/badge/license-MIT-blue)
 ![Multi-AI](https://img.shields.io/badge/Multi--AI-OpenAI%20%7C%20Claude%20%7C%20Gemini%20%7C%20Mistral%20%7C%20LiberAI-purple)\
 \
 ---\
