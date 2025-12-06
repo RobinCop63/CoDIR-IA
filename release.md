@@ -2,9 +2,9 @@
 *(FR + EN release notes)*
 
 ![Status](https://img.shields.io/badge/status-Public%20Release%20v1.0.0-brightgreen)
-![Platform](https://img.shields.io/badge/platform-Windows-blue)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-blue)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Multi-AI](https://img.shields.io/badge/Multi--AI-OpenAI%20%7C%20Claude%20%7C%20Gemini%20%7C%20Mistral%20%7C%20LiberAI-purple)
+![Multi-AI](https://img.shields.io/badge/Multi--AI-OpenAI%20%7C%20Claude%20%7C%20Gemini%20%7C%20Mistral-purple)
 
 ---
 
@@ -21,7 +21,7 @@ CoDIR IA est un environnement local multi-IA conçu pour offrir aux dirigeants, 
 ## 💻 Plateforme  
 
 - **Windows 10/11 : version stable officielle v1.0.0**  
-- **macOS : version en cours de finalisation (sortie prévue décembre → janvier)**  
+- **macOS : version stable officielle v1.0.0**  
 
 ---
 
@@ -31,26 +31,26 @@ CoDIR IA est un environnement local multi-IA conçu pour offrir aux dirigeants, 
 
 - `app.py` – interface CoDIR IA  
 - `codir_engine.py` – moteur décisionnel  
+- `libre_engine.py` – mode libre (comparaison des IA)  
 - `providers/` – intégrations :  
-  - OpenAI  
-  - Anthropic Claude  
-  - Google Gemini  
-  - Mistral  
-  - LiberAI  
+  - OpenAI (`openai_provider.py`)  
+  - Anthropic Claude (`claude_provider.py`)  
+  - Google Gemini (`gemini_provider.py`)  
+  - Mistral (`mistral_provider.py`)  
 
 ### ✅ Scripts de lancement  
 
-- `launch.bat` (Windows)  
-- `launch.sh` (macOS – version préliminaire incluse)  
+- `launch.bat`, `launch_codir.bat` (Windows)  
+- `launch.sh`, `launch_user.sh`, `launch_dev.sh` (macOS/Linux)  
 
 ### ✅ Fichiers utilitaires  
 
-- `.env.example` – template de configuration des clés API  
+- `.env.template` – template de configuration des clés API  
 - `requirements.txt` – dépendances Python  
 
 ### ✅ Documentation incluse  
 
-- **Manuel d’installation Windows (PDF)**  
+- **Manuel d'installation Windows & macOS (DOCX & PDF)**  
 - **CGU / Terms of Use FR & EN**  
 
 ---
@@ -59,18 +59,20 @@ CoDIR IA est un environnement local multi-IA conçu pour offrir aux dirigeants, 
 
 Toutes les instructions sont disponibles dans :  
 
+- `README.md`  
 - `README_CoDIR-IA_FR.md`  
 - `README_CoDIR-IA_EN.md`  
-- `Manuel_Installation/CoDIR_IA_Manuel_Installation_Windows_FINAL_GitHub.pdf`  
+- `manuel_installation/CoDIR_IA_Manuel_Installation_Win_Mac_FINAL_GitHub.docx`  
+- `manuel_installation/CoDIR_IA_Manuel_Installation_Windows_FINAL_GitHub.pdf`  
 
 ---
 
 ## 🔭 Prochaines étapes  
 
-- Release macOS v1.1.0  
 - Ajout de nouveaux providers IA  
 - Mode « CoDIR virtuel multiprofils »  
 - Améliorations UX Streamlit  
+- Version Docker / NAS  
 
 ---
 
@@ -87,35 +89,36 @@ CoDIR IA is a local multi-AI environment that provides executives, CFOs, consult
 ## 💻 Platform  
 
 - **Windows 10/11 – Stable v1.0.0**  
-- **macOS – Coming soon (December → January)**  
+- **macOS – Stable v1.0.0**  
 
 ---
 
-## 📦 What’s included  
+## 📦 What's included  
 
 ### ✅ Full application  
 
 - `app.py` – user interface  
 - `codir_engine.py` – decision engine  
+- `libre_engine.py` – free mode (AI comparison)  
 - `providers/` – integrations:  
-  - OpenAI  
-  - Anthropic Claude  
-  - Google Gemini  
-  - Mistral  
+  - OpenAI (`openai_provider.py`)  
+  - Anthropic Claude (`claude_provider.py`)  
+  - Google Gemini (`gemini_provider.py`)  
+  - Mistral (`mistral_provider.py`)  
 
 ### ✅ Launch scripts  
 
-- `launch.bat` (Windows)  
-- `launch.sh` (macOS – preview)  
+- `launch.bat`, `launch_codir.bat` (Windows)  
+- `launch.sh`, `launch_user.sh`, `launch_dev.sh` (macOS/Linux)  
 
 ### ✅ Utility files  
 
-- `.env.example` – API keys template  
+- `.env.template` – API keys template  
 - `requirements.txt` – Python dependencies  
 
 ### ✅ Documentation included  
 
-- **Windows installation manual (PDF)**  
+- **Windows & macOS installation manual (DOCX & PDF)**  
 - **Terms of Use (FR & EN)**  
 
 ---
@@ -124,18 +127,20 @@ CoDIR IA is a local multi-AI environment that provides executives, CFOs, consult
 
 See:  
 
+- `README.md`  
 - `README_CoDIR-IA_EN.md`  
 - `README_CoDIR-IA_FR.md`  
-- `Manuel_Installation/CoDIR_IA_Manuel_Installation_Windows_FINAL_GitHub.pdf`  
+- `manuel_installation/CoDIR_IA_Manuel_Installation_Win_Mac_FINAL_GitHub.docx`  
+- `manuel_installation/CoDIR_IA_Manuel_Installation_Windows_FINAL_GitHub.pdf`  
 
 ---
 
 ## 🔭 Next steps  
 
-- macOS Public Release v1.1.0  
 - Additional AI providers  
-- Full “multi-profile Executive Committee” mode  
+- Full "multi-profile Executive Committee" mode  
 - UI/UX improvements  
+- Docker / NAS version  
 
 ---
 
@@ -144,4 +149,4 @@ See:
 **Robin Sauzet** – SASU Hi! Gestion  
 **ChatGPT (OpenAI)**  
 
-*November 2025*
+*December 2025*

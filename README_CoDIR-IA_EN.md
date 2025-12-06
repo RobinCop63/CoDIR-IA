@@ -29,7 +29,7 @@ Your machine ■ Your data ■ Your strategic decisions.
 ## 🚀 Key Features
 
 - Simultaneous orchestration of **4 advanced AI models**
-- **“Executive Committee Meeting” mode**: structured insights, risks, decisions
+- **"Executive Committee Meeting" mode**: structured insights, risks, decisions
 - Strategic, financial, operational and transformation analysis
 - Clean and fast UI powered by **Streamlit**
 - Fully **open‑source**, modular and extensible
@@ -53,31 +53,30 @@ Your machine ■ Your data ■ Your strategic decisions.
 git clone https://github.com/RobinCop63/CoDIR-IA.git
 cd CoDIR-IA
 pip install -r requirements.txt
-streamlit run app_streamlit.py
+streamlit run app.py
 ```
 
 ---
 
 ## 🔐 API Keys Setup
 
-Create a `.env` file:
+Create a `.env` file (or copy `.env.template`):
 
 ```
 OPENAI_API_KEY=xxxx
 ANTHROPIC_API_KEY=xxxx
-GEMINI_API_KEY=xxxx
+GOOGLE_API_KEY=xxxx
 MISTRAL_API_KEY=xxxx
-LIBERAI_API_KEY=xxxx
 ```
 
 ---
 
 ## 📚 Documentation included
 
-- Windows installation manual (PDF & DOCX)  
+- Windows & macOS installation manual (DOCX, Windows PDF based on same content)  
 - README (FR & EN)  
 - Release notes  
-- Coming soon: macOS, Docker, NAS execution
+- Coming soon: Docker, NAS execution
 
 ---
 
@@ -85,30 +84,106 @@ LIBERAI_API_KEY=xxxx
 
 ```
 CoDIR-IA/
-│ app_streamlit.py
+│ app.py
 │ codir_engine.py
 │ libre_engine.py
 │ providers/
 │   ├── openai_provider.py
-│   ├── anthropic_provider.py
+│   ├── claude_provider.py
 │   ├── mistral_provider.py
 │   └── gemini_provider.py
-│ .env.example
+│ .env.template
 │ README.md
-│ Manuel_Installation/
+│ manuel_installation/
 │   ├── PDF
 │   └── DOCX
 ```
 
 ---
 
+## 🪟 Windows installation
+
+### 1. Prerequisites
+
+- Windows 10 or 11 (64-bit)  
+- Python 3.10+ installed (`python --version` in PowerShell)  
+- Git installed (`git --version`)  
+
+### 2. Clone the CoDIR IA repository
+
+```bash
+git clone https://github.com/RobinCop63/CoDIR-IA.git
+cd CoDIR-IA
+```
+
+### 3. Start CoDIR IA using the Windows script
+
+Double-click on `launch.bat` or `launch_codir.bat`.
+
+This script will automatically:
+
+- create (if needed) a `venv\` virtual environment  
+- install all dependencies via `pip install -r requirements.txt`  
+- copy `.env.template` to `.env` if no `.env` exists yet  
+- launch the Streamlit UI in your default browser  
+
+👉 **Don't forget to fill in your API keys** in the `.env` file before heavy use.
+
+---
+
+## 🍏 macOS installation (standard)
+
+### 1. Prerequisites
+
+- macOS 13 or newer recommended  
+- Python 3.10+ installed (`python3 --version` in Terminal)  
+- Git installed (`git --version`)  
+
+If Python or Git are missing, you can install them via **Homebrew**:
+
+```bash
+brew install python git
+```
+
+### 2. Clone the CoDIR IA repository
+
+```bash
+git clone https://github.com/RobinCop63/CoDIR-IA.git
+cd CoDIR-IA
+```
+
+### 3. Start CoDIR IA using the macOS script
+
+Make the script executable (one time only):
+
+```bash
+chmod +x launch.sh
+```
+
+Then run the orchestrator:
+
+```bash
+./launch.sh
+```
+
+This script will automatically:
+
+- create (if needed) a `venv/` virtual environment  
+- install all dependencies via `pip install -r requirements.txt`  
+- copy `.env.template` to `.env` if no `.env` exists yet  
+- launch the Streamlit UI in your default browser  
+
+👉 **Don't forget to fill in your API keys** in the `.env` file before heavy use (OpenAI, Anthropic, Gemini, Mistral, etc.).
+
+---
+
 ## 🗺️ Roadmap
 
 ### v15 — November 2025  
-Stable Windows release  
+Stable Windows & macOS release  
 
 ### v16 — December 2025  
-Improved UX, orchestration refinements, macOS prep  
+Improved UX, orchestration refinements  
 
 ### v17 — 2026  
 Docker, NAS version, advanced dashboard

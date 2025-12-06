@@ -1,3 +1,8 @@
+import os, sys
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if BASE_DIR not in sys.path:
+    sys.path.append(BASE_DIR)
+
 # codir_engine.py — v15.1 safe + outputs map + alias DG + inputs
 import os
 import traceback
@@ -9,7 +14,7 @@ except Exception:
     call_openai = None
 
 try:
-    from providers.google_provider import call_gemini
+    from providers.gemini_provider import call_gemini
 except Exception:
     call_gemini = None
 

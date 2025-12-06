@@ -81,7 +81,7 @@ def call_claude(
     """
 
     # Sélection modèle
-    m = model or os.getenv("ANTHROPIC_MODEL", "claude-3-5-sonnet-20241022")
+    m = model or os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-5")
 
     # Clé API
     api_key = os.getenv("ANTHROPIC_API_KEY")
