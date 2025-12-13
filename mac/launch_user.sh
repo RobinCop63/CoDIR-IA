@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
 # CoDIR IA - Lancement (macOS/Linux) - PUBLIC
-# Usage: chmod +x launch_user.sh && ./launch_user.sh
+# Usage: chmod +x mac/launch_user.sh && ./mac/launch_user.sh
+# OU depuis le dossier mac : chmod +x launch_user.sh && ./launch_user.sh
 
 set -euo pipefail
 
-# Aller dans le dossier du script
-cd "$(dirname "$0")"
+# Aller dans le dossier RACINE du projet (parent du dossier mac/)
+SCRIPT_DIR="$(dirname "$0")"
+cd "$SCRIPT_DIR/.."
 
 echo "=========================================="
 echo "  🚀 Lancement de CoDIR IA (Public)"
 echo "=========================================="
+echo
+echo "📁 Dossier de travail : $(pwd)"
 echo
 
 # 1) Python3 requis

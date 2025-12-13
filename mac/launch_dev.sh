@@ -1,14 +1,18 @@
 #!/usr/bin/env bash
 # CoDIR IA - Lancement (macOS/Linux) - DEV
-# Usage: chmod +x launch_dev.sh && ./launch_dev.sh
+# Usage: chmod +x mac/launch_dev.sh && ./mac/launch_dev.sh
 
 set -euo pipefail
 
-cd "$(dirname "$0")"
+# Aller dans le dossier RACINE du projet (parent du dossier mac/)
+SCRIPT_DIR="$(dirname "$0")"
+cd "$SCRIPT_DIR/.."
 
 echo "=========================================="
 echo "  👨‍💻 CoDIR IA - Mode Développement"
 echo "=========================================="
+echo
+echo "📁 Dossier de travail : $(pwd)"
 echo
 
 # venv obligatoire en mode dev
