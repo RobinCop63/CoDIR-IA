@@ -1,7 +1,7 @@
 streamlit
 python-dotenv
 openai>=1.40.0
-google-generativeai>=0.8.5
+google-genai
 anthropic>=0.34.0
 mistralai>=1.2.0
 python-docx

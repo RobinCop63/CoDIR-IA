@@ -1,61 +1,68 @@
 #!/usr/bin/env bash
 # CoDIR IA - Lancement (macOS/Linux) - PUBLIC
-# Usage: chmod +x mac/launch_user.sh && ./mac/launch_user.sh
-# OU depuis le dossier mac : chmod +x launch_user.sh && ./launch_user.sh
+# Usage:
+#   chmod +x mac/launch_user.sh && ./mac/launch_user.sh
+# Or from ./mac:
+#   chmod +x launch_user.sh && ./launch_user.sh
 
 set -euo pipefail
 
-# Aller dans le dossier RACINE du projet (parent du dossier mac/)
-SCRIPT_DIR="$(dirname "$0")"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR/.."
 
 echo "=========================================="
-echo "  🚀 Lancement de CoDIR IA (Public)"
+echo "  🚀 Lancement de CoDIR IA (macOS/Linux)"
 echo "=========================================="
 echo
 echo "📁 Dossier de travail : $(pwd)"
 echo
 
-# 1) Python3 requis
+# 0) Ensure .env exists early (so user can paste API keys before the first install)
+if [ ! -f ".env" ]; then
+  if [ -f ".env.template" ]; then
+    echo "🧩 Aucun .env détecté, création à partir de .env.template..."
+    cp .env.template .env
+    echo "👉 Ouvrez .env et collez vos clés API avant utilisation."
+  elif [ -f ".env.example" ]; then
+    echo "🧩 Aucun .env détecté, création à partir de .env.example..."
+    cp .env.example .env
+    echo "👉 Ouvrez .env et collez vos clés API avant utilisation."
+  else
+    echo "🧩 Aucun modèle .env trouvé, création d'un .env minimal..."
+    cat > .env <<'EOF'
+# CoDIR IA - Environment variables
+# Paste your API keys below
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+GEMINI_API_KEY=
+MISTRAL_API_KEY=
+EOF
+    echo "👉 Ouvrez .env et collez vos clés API avant utilisation."
+  fi
+fi
+
+# 1) Check python
 if ! command -v python3 >/dev/null 2>&1; then
-  echo "❌ Python3 introuvable."
-  echo "   Installez-le avec Homebrew :  brew install python"
+  echo "❌ python3 introuvable. Installez Python 3.10+ puis relancez."
   exit 1
 fi
 
-# 2) .env depuis template si absent
-if [ ! -f ".env" ] && [ -f ".env.template" ]; then
-  echo "⚠️  Aucun .env détecté — création depuis .env.template"
-  cp ".env.template" ".env"
-  echo "   ➜ Ouvrez .env et ajoutez vos clés API avant une utilisation complète."
-  echo
+# 2) Create venv
+if [ ! -d ".venv" ]; then
+  echo "🔧 Création de l'environnement virtuel (.venv)..."
+  python3 -m venv .venv
 fi
 
-# 3) Créer venv si absent
-if [ ! -d "venv" ]; then
-  echo "🔧 Création de l'environnement virtuel (venv)..."
-  python3 -m venv venv
-fi
-
-# 4) Activer venv
+# 3) Activate venv
 # shellcheck disable=SC1091
-source "venv/bin/activate"
+source ".venv/bin/activate"
 
-# 5) Installer dépendances
-echo
-echo "🔧 Installation/mise à jour des dépendances..."
+# 4) Install deps
+echo "📦 Installation / mise à jour des dépendances..."
 python -m pip install --upgrade pip >/dev/null
 pip install -r requirements.txt
 
-# 6) Lancer l'app
+# 5) Run
 echo
 echo "▶️  Démarrage de l'application (Streamlit)..."
-# Fallback si 'streamlit' n'est pas dans le PATH du venv
-if command -v streamlit >/dev/null 2>&1; then
-  streamlit run app.py
-else
-  python -m streamlit run app.py
-fi
-
-echo
-echo "✅ Fin de session CoDIR IA"
+python -m streamlit run app.py

@@ -1,50 +1,103 @@
-# CoDIR-IA – Orchestrateur Multi-IA pour décideurs
-Version 2025-12-15 – Windows & macOS
+# CoDIR IA v16.0
 
-Un outil simple, local, et polyvalent pour orchestrer plusieurs IA (OpenAI, Anthropic Claude, Google Gemini, Mistral) au service des dirigeants, DAF, PMO et consultants.
+**🇫🇷 [Documentation française](README_FR.md)** | **🇬🇧 [English documentation](README_EN.md)**
 
-## 🚀 Fonctionnalités principales
-- Interface locale (Streamlit)
-- Multi-fournisseurs IA (OpenAI, Claude 4.5, Gemini, Mistral…)
-- Prompts de rôle intégrés
-- Chargement automatique des clés API via `.env`
-- Compatible Windows & macOS
-- Aucun stockage des données
+---
 
-## 🖥️ Installation Windows
-1. Télécharger le dossier `win/`.
-2. Extraire sur le Bureau.
-3. Lancer `launch_codir.bat`.
-4. Un fichier `.env` est créé automatiquement.
+## Quick Start / Démarrage rapide
 
-## 🍎 Installation macOS
-1. Télécharger le dossier `mac/`.
-2. Extraire sur le Bureau.
-3. Dans le Terminal :
-   ```bash
-   chmod +x launch_user.sh
-   ./launch_user.sh
-   ```
-
-## 🔑 Configuration des API Keys
-Fichier `.env` :
+### Windows
 ```
-OPENAI_API_KEY=
-ANTHROPIC_API_KEY=
-GEMINI_API_KEY=
-MISTRAL_API_KEY=
+Double-click: setup_windows.bat
 ```
-Renseigner uniquement les clés souhaitées.
 
-## 📦 Structure du projet
-Voir dossier principal (win, mac, providers, engines, prompts).
+### macOS
+```
+Double-click: CoDIR-IA.app
+```
 
-## ▶️ Lancer CoDIR-IA
-Windows : `launch_codir.bat`  
-macOS : `./launch_user.sh`
+**Alternative (command line)**:
+```bash
+chmod +x mac/launch_user.sh && ./mac/launch_user.sh
+```
 
-## 🛡️ Confidentialité
-Aucune donnée stockée ou transmise hors API des fournisseurs.
+---
 
-## 📄 Licence
-MIT License.
+## ✨ What's new in v16.0
+
+- 🖱️ **Double-click launcher** for Windows and macOS
+- 🍎 **Native macOS application** with Dock icon
+- 🔧 **Google Gemini SDK migration** to official `google-genai`
+- 📦 **No heavy installer** (scripts + Python)
+- 🎯 **Setup in ~5 minutes** on both platforms (Python required)
+
+---
+
+> ⚠️ **Important**
+> 
+> 🇫🇷 L'utilisation des API IA est **payante** (facturée par chaque fournisseur). Vos données sont transmises aux serveurs des éditeurs IA.
+> 
+> 🇬🇧 Using AI APIs is **paid** (billed by each provider). Your data is transmitted to AI vendors' servers.
+
+---
+
+## 🏗️ Architecture
+
+- **Multi-provider**: OpenAI, Claude, Gemini, Mistral
+- **Two modes**: CoDIR (committee simulation) & Libre (individual AI)
+- **Local execution**: No data stored in cloud
+- **Modular design**: Easy to extend with new providers
+
+---
+
+## 📖 Documentation
+
+- **Installation**: See platform-specific guides in `/win` and `/mac` folders
+- **Release notes**: [RELEASE_v16.0.md](RELEASE_v16.0.md)
+- **Configuration**: Create `.env` file with your API keys (see `.env.template`)
+
+---
+
+## 🛠️ Requirements
+
+- **Python 3.10+**
+- **Internet connection** (for API calls and initial setup)
+- **API keys** for the AI providers you want to use
+
+---
+
+## 📂 Project structure
+
+```
+CoDIR-IA/
+├── app.py                    # Main application
+├── codir_engine.py           # CoDIR mode logic
+├── libre_engine.py           # Libre mode logic
+├── providers/                # AI provider integrations
+│   ├── openai_provider.py
+│   ├── claude_provider.py
+│   ├── gemini_provider.py
+│   └── mistral_provider.py
+├── prompts/                  # Role definitions
+├── win/                      # Windows launcher & docs
+├── mac/                      # macOS launcher & docs
+└── outputs/                  # Conversation exports
+```
+
+---
+
+## 🤝 Contributing
+
+CoDIR IA is **100% open source** under MIT license. Contributions, feedback, and feature requests are welcome.
+
+---
+
+## 📄 License
+
+MIT - See [LICENSE](LICENSE) file for details.
+
+---
+
+**Developed by**: HiGestion  
+**Version**: 16.0  
+**© 2024-2026**

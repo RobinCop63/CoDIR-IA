@@ -12,9 +12,9 @@ from codir_engine import run_codir_session
 from libre_engine import run_free_mode
 
 load_dotenv(override=True)
-st.set_page_config(page_title="Orchestrateur multi-IA v15", layout="wide")
+st.set_page_config(page_title="CoDIR IA v16.0", layout="wide")
 
-st.title("Orchestrateur multi-IA v15")
+st.title("CoDIR IA v16.0")
 st.caption("Mode Libre / Mode CODIR IA — OpenAI · Gemini · Claude · Mistral")
 
 mode = st.sidebar.radio("Choisir un mode", ["Mode CODIR IA", "Mode Libre"])
@@ -25,10 +25,10 @@ with st.sidebar:
     max_tokens = st.number_input("Max tokens", min_value=256, max_value=8000, value=int(os.getenv("MAX_TOKENS", 2000)))
     st.markdown("---")
     st.write("Modèles lus depuis `.env` :")
-    st.code("\n".join([
-        f"OPENAI_MODEL={os.getenv('OPENAI_MODEL','gpt-4o')}",
-        f"GEMINI_MODEL={os.getenv('GEMINI_MODEL','gemini-2.5-flash')}",
-        f"ANTHROPIC_MODEL={os.getenv('CLAUDE_MODEL','claude-sonnet-4-5')}",
+    st.code("\\n".join([
+        f"OPENAI_MODEL={os.getenv('OPENAI_MODEL','gpt-4o-mini')}",
+        f"GOOGLE_MODEL={os.getenv('GOOGLE_MODEL', os.getenv('GEMINI_MODEL','gemini-2.5-flash'))}",
+        f"ANTHROPIC_MODEL={os.getenv('ANTHROPIC_MODEL','claude-sonnet-4-5')}",
         f"MISTRAL_MODEL={os.getenv('MISTRAL_MODEL','mistral-large-latest')}",
     ]))
 
