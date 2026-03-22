@@ -1,23 +1,73 @@
-# Confidentialité / Privacy (CoDIR IA)
+# Politique de confidentialité — CoDIR IA v16.3.3.22
 
-## FR
-- CoDIR IA s’exécute **localement** sur votre machine (Streamlit).
-- CoDIR IA ne met pas en place de serveur distant côté projet.
-- Les fichiers de sortie éventuels sont écrits **localement** (dossier `outputs/`).
-- Lorsque vous utilisez un fournisseur (OpenAI / Anthropic / Google / Mistral), vos prompts et le contexte sont **envoyés au fournisseur**. La conservation et l’usage de ces données dépendent de **leurs** conditions.
+*Dernière mise à jour : Février 2026*
 
-Recommandations :
-- Évitez d’envoyer des données sensibles sans validation interne.
-- Utilisez des clés API dédiées et révocables.
-- Limitez les droits et quotas côté fournisseurs.
+## 1. Principe fondamental
+**CoDIR IA est une application locale.** Vos données restent sur votre machine. Aucune donnée n'est envoyée aux serveurs de CoDIR IA ou de son auteur.
 
-## EN
-- CoDIR IA runs **locally** on your machine (Streamlit).
-- The project does not operate a remote CoDIR IA server.
-- Optional exports are written **locally** (`outputs/`).
-- When you use a provider (OpenAI / Anthropic / Google / Mistral), prompts and context are **sent to that vendor**. Retention and usage depend on **their** policies.
+## 2. Données stockées localement
+- Clés API : `secrets.json` (hors repo)
+- Paramètres : `settings.json`
+- Logs & diagnostics : `outputs/` (sans clés API)
+- Exports : `outputs/` (DOCX, PPTX)
 
-Recommendations:
-- Avoid sending sensitive data without internal approval.
-- Use dedicated, revocable API keys.
-- Set quotas/limits on vendor accounts.
+Si un dossier de configuration est utilisé :
+- Windows : `%APPDATA%\CoDIR-IA\`
+- macOS/Linux : `~/.config/codir-ia/`
+
+## 3. Données non stockées
+CoDIR IA ne conserve pas :
+- vos documents uploadés (traités puis supprimés de l’espace temporaire),
+- un historique complet des sessions (sauf export explicite),
+- vos clés API dans le dépôt Git.
+
+## 4. Données transmises aux providers IA
+Lors d’une session, les prompts (et éventuellement le texte extrait des pièces jointes) sont envoyés aux APIs des providers sélectionnés (OpenAI, Anthropic, Google, Mistral). Référez‑vous à leurs politiques respectives.
+
+## 5. Sécurité des clés API
+- Les clés sont stockées localement (ex: `secrets.json`) et ignorées par Git.
+- Elles ne sont jamais affichées dans les logs.
+
+## 6. Télémétrie
+CoDIR IA **ne collecte aucune télémétrie**.
+
+## 7. Contact
+Questions : GitHub Issues (voir README).
+
+---
+
+# Privacy Policy — CoDIR IA v16.3.3.22
+
+*Last updated: February 2026*
+
+## 1. Core principle
+**CoDIR IA is a local application.** Your data stays on your machine. No data is sent to CoDIR IA servers (there are none) or to the author.
+
+## 2. Locally stored data
+- API keys: `secrets.json` (outside the repo)
+- Settings: `settings.json`
+- Logs & diagnostics: `outputs/` (no API keys)
+- Exports: `outputs/` (DOCX, PPTX)
+
+If a config directory is used:
+- Windows: `%APPDATA%\CoDIR-IA\`
+- macOS/Linux: `~/.config/codir-ia/`
+
+## 3. Data not stored
+CoDIR IA does not keep:
+- your uploaded files (processed then removed from temporary storage),
+- full session history (unless you export),
+- your API keys in the Git repository.
+
+## 4. Data sent to AI providers
+During a session, prompts (and optionally extracted attachment text) are sent to the selected providers’ APIs (OpenAI, Anthropic, Google, Mistral). Please consult their own policies.
+
+## 5. API key security
+- Keys are stored locally (e.g., `secrets.json`) and ignored by Git.
+- Keys are never printed in logs.
+
+## 6. Telemetry
+CoDIR IA **does not collect telemetry**.
+
+## 7. Contact
+Questions: GitHub Issues (see README).

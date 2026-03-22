@@ -1,46 +1,100 @@
-# macOS Installation (CoDIR IA v16.0)
+# 🍎 macOS Installation Guide — CoDIR IA v16.3.3.22
 
-## Two ways to launch CoDIR IA
+---
 
-### Option A — macOS Application (.app) (recommended for releases)
-If you use the **macOS release** (distributed archive), you will see `CoDIR-IA.app`.
+## 📋 Requirements
 
-✅ **You can move the app to Applications and/or pin it to the Dock**: it will still work.
+- macOS 12 (Monterey) or higher
+- Internet connection
+- At least **one API key** (OpenAI, Anthropic, Google or Mistral)
 
-**Important (working folder)**
-- On first launch, the app creates (or updates) a writable working folder at:
-  - `~/CoDIR-IA/CoDIR-IA-main`
-- This is where `.venv`, `.env` and `outputs/` are created.
-- Configure your API keys in: `~/CoDIR-IA/CoDIR-IA-main/.env`
+---
 
-On first launch, macOS Gatekeeper may block the app:
-1. Double-click `CoDIR-IA.app`
-2. If blocked: **Right click → Open → Open**
-   - Alternative: **System Settings → Privacy & Security → Open Anyway**
+## Method 1 — macOS Application (recommended)
 
-After that: just double-click `CoDIR-IA.app`.
+### Installation
 
-### Option B — Script launch (.command or bash)
-From the unzipped release folder:
-- Double-click `CoDIR-IA.command` (once allowed by macOS)
+1. Download the ZIP from [GitHub Releases](https://github.com/robinsauzet/codir-ia/releases)
+2. Extract the ZIP (double-click)
 
-Or from the project folder (source):
+### First launch
+
+Double-click **`CoDIR IA.app`**
+
+If macOS shows *"Cannot open application"*:
+1. Go to **System Settings** > **Privacy & Security**
+2. Scroll to the **Security** section
+3. Click **Open Anyway**
+
+*or* right-click the app > **Open** > **Open**
+
+### Subsequent launches
+
+Simply double-click **`CoDIR IA.app`**
+
+The application automatically opens a Terminal, installs dependencies if needed, then launches the interface in your browser.
+
+---
+
+## Method 2 — Terminal (alternative)
+
+Double-click **`CoDIR-IA.command`**
+
+This opens a Terminal and automatically runs the installation + application.
+
+If macOS blocks it:
 ```bash
-chmod +x mac/launch_user.sh
-./mac/launch_user.sh
+chmod +x CoDIR-IA.command
 ```
 
-## API keys configuration
-On first launch, a `.env` file is created automatically (copied from `.env.template`).
-Edit `.env` and paste only the keys you need.
+---
 
-👉 If you launch via the `.app`, the file is here: `~/CoDIR-IA/CoDIR-IA-main/.env`
+## Method 3 — Manual Installation
 
-💡 `.env` is hidden on macOS. In Finder: `Cmd + Shift + .`
+```bash
+# In the CoDIR-IA folder
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-On first launch via the `.app`, CoDIR IA also opens `.env` in TextEdit and creates a visible helper file `ENV_LOCATION.txt` in the same folder.
+**Python required**: 3.10 or higher.
 
-## Quick troubleshooting
-- **python3 not found**: install Python 3.10+ (python.org) and relaunch.
-- **Permission denied**: run `chmod +x mac/launch_user.sh` and retry.
-- **Blocked by macOS**: Right click → Open (one time).
+Check: `python3 --version`
+
+Install if missing: [python.org/downloads/macos](https://www.python.org/downloads/macos/)
+*or* via Homebrew: `brew install python@3.11`
+
+---
+
+## API Key Configuration
+
+On first launch, a dialog box appears to enter your keys.
+
+You can also access the **Configuration** page from the sidebar:
+
+| Provider | Variable |
+|----------|----------|
+| OpenAI | `OPENAI_API_KEY` |
+| Anthropic | `ANTHROPIC_API_KEY` |
+| Google/Gemini | `GOOGLE_API_KEY` |
+| Mistral | `MISTRAL_API_KEY` |
+
+---
+
+## macOS Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| App blocked by Gatekeeper | System Settings > Privacy > Open Anyway |
+| "command not found: python3" | Install Python via [python.org](https://www.python.org) or `brew install python@3.11` |
+| "Port 8501 already in use" | `streamlit run app.py --server.port 8502` |
+| Permission denied on .command | `chmod +x CoDIR-IA.command` |
+| App starts but browser doesn't open | Manually open [http://localhost:8501](http://localhost:8501) |
+
+Check `outputs/setup_macos.log` for detailed error information.
+
+---
+
+*CoDIR IA v16.3.3.22 — macOS Installation Guide*

@@ -1,46 +1,100 @@
-# Installation macOS (CoDIR IA v16.0)
+# 🍎 Guide d'installation macOS — CoDIR IA v16.3.3.22
 
-## 2 façons de lancer CoDIR IA
+---
 
-### Option A — Application macOS (.app) (recommandé pour les releases)
-Si vous utilisez une **release macOS** (archive distribuée), vous verrez `CoDIR-IA.app`.
+## 📋 Prérequis
 
-✅ **Vous pouvez déplacer l'application dans Applications et/ou la mettre dans le Dock** : elle reste fonctionnelle.
+- macOS 12 (Monterey) ou supérieur
+- Connexion Internet
+- Au moins **une clé API** (OpenAI, Anthropic, Google ou Mistral)
 
-**Important (dossier de travail)**
-- Au premier lancement, l'application crée (ou met à jour) un dossier de travail dans :
-  - `~/CoDIR-IA/CoDIR-IA-main`
-- C'est dans ce dossier que seront créés : `.venv`, `.env` et vos fichiers `outputs/`.
-- Vos clés API se configurent dans : `~/CoDIR-IA/CoDIR-IA-main/.env`
+---
 
-Au premier lancement, macOS peut bloquer l’app (Gatekeeper) :
-1. Double-cliquez sur `CoDIR-IA.app`
-2. Si macOS bloque : **clic droit → Ouvrir → Ouvrir**
-   - Alternative : **Réglages Système → Confidentialité et sécurité → Ouvrir quand même**
+## Méthode 1 — Application macOS (recommandé)
 
-Ensuite, les fois suivantes : double-clic sur `CoDIR-IA.app`.
+### Installation
 
-### Option B — Lancement via script (.command ou bash)
-Dans le dossier dézippé (release) :
-- Double-cliquez sur `CoDIR-IA.command` (une fois autorisé par macOS)
+1. Téléchargez le ZIP depuis [GitHub Releases](https://github.com/robinsauzet/codir-ia/releases)
+2. Extrayez le ZIP (double-clic)
 
-Ou, depuis le dossier du projet (source) :
+### Premier lancement
+
+Double-cliquez sur **`CoDIR IA.app`**
+
+Si macOS affiche *"Impossible d'ouvrir l'application"* :
+1. Allez dans **Réglages Système** > **Confidentialité & sécurité**
+2. Faites défiler jusqu'à la section **Sécurité**
+3. Cliquez **Ouvrir quand même**
+
+*ou* clic droit sur l'app > **Ouvrir** > **Ouvrir**
+
+### Lancements suivants
+
+Double-cliquez simplement sur **`CoDIR IA.app`**
+
+L'application ouvre automatiquement un Terminal, installe les dépendances si nécessaire, puis lance l'interface dans votre navigateur.
+
+---
+
+## Méthode 2 — Terminal (alternative)
+
+Double-cliquez sur **`CoDIR-IA.command`**
+
+Cela ouvre un Terminal et lance automatiquement l'installation + l'application.
+
+Si macOS bloque :
 ```bash
-chmod +x mac/launch_user.sh
-./mac/launch_user.sh
+chmod +x CoDIR-IA.command
 ```
 
+---
+
+## Méthode 3 — Installation manuelle
+
+```bash
+# Dans le dossier CoDIR-IA
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+**Python requis** : 3.10 ou supérieur.
+
+Vérifier : `python3 --version`
+
+Installer si absent : [python.org/downloads/macos](https://www.python.org/downloads/macos/)
+*ou* via Homebrew : `brew install python@3.11`
+
+---
+
 ## Configuration des clés API
-Au premier lancement, un fichier `.env` est créé automatiquement (copie de `.env.template`).
-Ouvrez `.env` et renseignez **uniquement** les clés dont vous avez besoin.
 
-👉 Si vous lancez via l’application `.app`, le fichier est ici : `~/CoDIR-IA/CoDIR-IA-main/.env`
+Au premier lancement, une boîte de dialogue apparaît pour saisir vos clés.
 
-💡 `.env` est un fichier cache sur macOS. Dans Finder : `Cmd + Shift + .`
+Vous pouvez également accéder à la page **Configuration** via la barre latérale :
 
-Au premier lancement via l'application `.app`, CoDIR IA ouvre aussi `.env` dans TextEdit et cree un fichier visible `ENV_LOCATION.txt` (dans le meme dossier) qui rappelle le chemin.
+| Provider | Variable |
+|----------|----------|
+| OpenAI | `OPENAI_API_KEY` |
+| Anthropic | `ANTHROPIC_API_KEY` |
+| Google/Gemini | `GOOGLE_API_KEY` |
+| Mistral | `MISTRAL_API_KEY` |
 
-## Depannage rapide
-- **python3 introuvable** : installez Python 3.10+ (python.org) puis relancez.
-- **Permission denied** : relancez après `chmod +x mac/launch_user.sh`.
-- **Bloqué par macOS** : clic droit → Ouvrir (une seule fois).
+---
+
+## Dépannage macOS
+
+| Problème | Solution |
+|----------|----------|
+| App bloquée par Gatekeeper | Réglages Système > Confidentialité > Ouvrir quand même |
+| "command not found: python3" | Installer Python via [python.org](https://www.python.org) ou `brew install python@3.11` |
+| "Port 8501 déjà utilisé" | `streamlit run app.py --server.port 8502` |
+| Permissions refusées sur .command | `chmod +x CoDIR-IA.command` |
+| L'app se lance mais le navigateur ne s'ouvre pas | Ouvrir manuellement [http://localhost:8501](http://localhost:8501) |
+
+Consultez `outputs/setup_macos.log` pour le détail des erreurs.
+
+---
+
+*CoDIR IA v16.3.3.22 — macOS Installation Guide*

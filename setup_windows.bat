@@ -1,128 +1,95 @@
 @echo off
-setlocal ENABLEDELAYEDEXPANSION
-
-REM =============================================
-REM   CoDIR IA v16.0 - Installation Windows
-REM   Double-clic pour installer + creer raccourci
-REM =============================================
-
+setlocal
 cd /d "%~dp0"
 
+if not exist "outputs" mkdir outputs
+set "LOG=outputs\setup_windows.log"
+
+> "%LOG%" echo ==================================================
+>>"%LOG%" echo CoDIR IA - setup_windows (Windows)
+>>"%LOG%" echo Date: %date% %time%
+>>"%LOG%" echo Folder: %cd%
+>>"%LOG%" echo ==================================================
+
 echo.
-echo ==============================================
-echo   CoDIR IA v16.0 - Installation Windows
-echo ==============================================
+echo ========================================
+echo  CoDIR IA - Installation (Windows)
+echo ========================================
 echo.
 
-REM 1) Verifier Python
-python --version >nul 2>&1
-if errorlevel 1 (
-    echo [ERREUR] Python n'est pas installe ou pas dans le PATH.
-    echo          Telechargez Python sur https://www.python.org/downloads/
-    echo          Cochez "Add Python to PATH" lors de l'installation.
-    pause
-    exit /b 1
-)
-echo [OK] Python detecte
+echo [1/5] Verification de Python...
 
-REM 2) Creer venv si necessaire
-if not exist ".venv" (
-    echo.
-    echo [1/4] Creation de l'environnement virtuel...
-    python -m venv .venv
-    if errorlevel 1 (
-        echo [ERREUR] Impossible de creer le venv.
-        pause
-        exit /b 1
-    )
+REM Prefer py launcher when available (more reliable on Windows)
+where py >nul 2>&1
+if %ERRORLEVEL%==0 (
+  set "PY=py -3"
 ) else (
-    echo [OK] Environnement virtuel existant
+  set "PY=python"
 )
 
-REM 3) Activer et installer dependances
-echo.
-echo [2/4] Installation des dependances...
-call ".venv\Scripts\activate"
-python -m pip install --upgrade pip >nul 2>&1
-pip install -r requirements.txt
+%PY% --version >>"%LOG%" 2>&1
 if errorlevel 1 (
-    echo [ERREUR] Erreur d'installation des dependances.
-    pause
-    exit /b 1
-)
-echo [OK] Dependances installees
-
-REM 4) Creer .env si absent
-if not exist ".env" (
-    echo.
-    echo [3/4] Creation du fichier .env...
-    if exist ".env.template" (
-        copy ".env.template" ".env" >nul
-        echo [OK] Fichier .env cree - IMPORTANT: editez-le pour ajouter vos cles API
-    ) else (
-        echo [ATTENTION] Pas de .env.template trouve. Creez un fichier .env manuellement.
-    )
-) else (
-    echo [OK] Fichier .env existant
+  echo.
+  echo [ERREUR] Python non detecte.
+  echo Installe Python 3.11/3.12 puis relance setup.
+  echo Details: %LOG%
+  echo [ERROR] Python not found >>"%LOG%"
+  echo.
+  pause
+  exit /b 1
 )
 
-REM 4b) Ouvrir .env dans le Bloc-notes si aucune cle API n'est renseignee
-set "ENV_FILE=%CD%\.env"
-call :CHECK_ENV_READY
-if "%ENV_READY%"=="0" (
-    echo.
-    echo [ACTION] Aucune cle API detectee dans .env.
-    echo          Ouverture de .env dans le Bloc-notes...
-    start /wait notepad "%ENV_FILE%"
-    call :CHECK_ENV_READY
-)
+echo [2/5] Creation environnement virtuel (.venv)...
 
-REM 5) Creer le raccourci Bureau
-echo.
-echo [4/4] Creation du raccourci sur le Bureau...
-powershell -ExecutionPolicy Bypass -File "%~dp0win\create_shortcut.ps1"
+%PY% -c "import venv" >>"%LOG%" 2>&1
 if errorlevel 1 (
-    echo [ATTENTION] Le raccourci n'a pas pu etre cree automatiquement.
-    echo             Vous pouvez lancer l'app avec launch_codir.bat
-) else (
-    echo [OK] Raccourci cree sur le Bureau
+  echo.
+  echo [ERREUR] Module venv indisponible dans cette installation Python.
+  echo Reinstalle Python en incluant la librairie standard.
+  echo Details: %LOG%
+  echo [ERROR] venv module missing >>"%LOG%"
+  echo.
+  pause
+  exit /b 1
 )
 
-echo.
-echo ==============================================
-echo   Installation terminee !
-echo ==============================================
-echo.
-echo   IMPORTANT - Avant la premiere utilisation :
-echo   1. Le fichier .env a ete cree (si besoin)
-echo   2. Ajoutez vos cles API (OpenAI, Anthropic, etc.)
-echo.
-if "%ENV_READY%"=="0" (
-echo   [ATTENTION] Aucune cle API n'a ete detectee. L'app ne pourra pas appeler les IA.
+if exist ".venv\Scripts\python.exe" goto VENV_OK
+if exist ".venv" (
+  echo [INFO] .venv partiel detecte, suppression... >>"%LOG%" 2>&1
+  rmdir /s /q ".venv" >>"%LOG%" 2>&1
 )
-echo.
-echo   Pour lancer CoDIR IA :
-echo   - Double-cliquez sur l'icone "CoDIR IA" sur le Bureau
-echo   - Ou double-cliquez sur launch_codir.bat
-echo.
-echo   NOTE: L'utilisation des API IA est payante.
-echo   Les couts sont factures par chaque fournisseur
-echo   (OpenAI, Anthropic, Google, Mistral).
-echo.
-pause
 
-exit /b 0
-
-:CHECK_ENV_READY
-set "ENV_READY=0"
-for %%K in (OPENAI_API_KEY ANTHROPIC_API_KEY GOOGLE_API_KEY GEMINI_API_KEY MISTRAL_API_KEY) do (
-  for /f "usebackq tokens=1* delims==" %%A in (`findstr /i /r "^%%K=" "%ENV_FILE%"`) do (
-    set "VAL=%%B"
-    if not "!VAL!"=="" (
-      if /I not "!VAL!"=="YOUR_KEY_HERE" if /I not "!VAL!"=="CHANGEME" if /I not "!VAL!"=="<YOUR_KEY>" (
-        set "ENV_READY=1"
-      )
-    )
-  )
+%PY% -m venv .venv >>"%LOG%" 2>&1
+if errorlevel 1 (
+  echo.
+  echo [ERREUR] Echec creation venv.
+  echo Details: %LOG%
+  echo.
+  pause
+  exit /b 1
 )
-exit /b 0
+
+:VENV_OK
+set "VPY=.venv\Scripts\python.exe"
+
+echo [3/5] Installation des dependances (silencieux)...
+"%VPY%" -m ensurepip --upgrade >>"%LOG%" 2>&1
+"%VPY%" -m pip install --upgrade pip setuptools wheel >>"%LOG%" 2>&1
+"%VPY%" -m pip install --upgrade -r requirements.txt >>"%LOG%" 2>&1
+if errorlevel 1 (
+  echo.
+  echo [ERREUR] Echec installation dependances.
+  echo Details: %LOG%
+  echo.
+  pause
+  exit /b 1
+)
+
+echo [4/5] Creation du raccourci Bureau...
+if exist "win\create_shortcut.ps1" (
+  powershell -NoProfile -ExecutionPolicy Bypass -File "win\create_shortcut.ps1" >>"%LOG%" 2>&1
+)
+
+echo [5/5] Lancement de CoDIR IA...
+call "%~dp0launch_codir.bat"
+exit /b %ERRORLEVEL%

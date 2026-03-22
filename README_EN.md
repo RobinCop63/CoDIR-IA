@@ -1,148 +1,190 @@
-# CoDIR IA v16.0 – Multi‑AI decision support orchestrator (open source)
+# 🏛️ CoDIR IA v16.3.3.22
 
-**CoDIR IA** is an analysis and decision‑support tool for executives, interim managers and consultants.  
-It simulates a structured, explainable "collective" reasoning — **without automating the final decision**.
+**Your Board of Directors, augmented by Artificial Intelligence**
 
-- **Runs locally** (Streamlit)
-- **Multi‑provider**: OpenAI, Anthropic (Claude), Google (Gemini), Mistral
-- **Modular architecture** (separate providers)
-- **Open source** (MIT)
+CoDIR IA simulates a complete board of directors with 4 specialized functions, each driven by a different AI model:
 
----
-
-> ⚠️ **IMPORTANT – Read before using**
-> 
-> **API Costs**: CoDIR IA is free and open source, but using AI APIs (OpenAI, Anthropic, Google, Mistral) is **paid**. Each call is billed directly by the provider to your personal account, according to their pricing.
-> 
-> **Privacy**: Your prompts and data are transmitted to the AI providers' servers. CoDIR IA does not store anything online, but AI vendors may retain logs according to their terms of service.
+- 🎯 **Strategy** — Strategic analysis and recommendations
+- 📢 **Marketing** — Operational marketing plan and KPIs
+- 💰 **Finance** — Financial projections and French tax considerations
+- 👔 **General Management** — Synthesis, decisions, T0→T+90d roadmap
 
 ---
 
-## 🚀 Quick start (Windows)
+## 📋 Table of Contents
 
-### Method 1: Automatic installation (recommended)
-
-1. Download and unzip the project
-2. Double‑click **`setup_windows.bat`**
-
-The script does everything automatically:
-- Creates the Python environment
-- Installs dependencies
-- Creates the `.env` file
-- Creates a Desktop shortcut with the CoDIR IA icon
-
-### Method 2: Direct launch
-
-1. Double‑click **`launch_codir.bat`**
-
-On first run, the launcher automatically creates the environment and installs dependencies.
-
-### Create the shortcut manually (if needed)
-
-From the project folder, run in PowerShell:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\win\create_shortcut.ps1
-```
+1. [Quick Start](#-quick-start)
+2. [API Key Configuration](#-api-key-configuration)
+3. [Usage](#-usage)
+4. [PowerPoint Export](#-powerpoint-export)
+5. [File Attachments](#-file-attachments)
+6. [Troubleshooting](#-troubleshooting)
+7. [Security & Privacy](#-security--privacy)
 
 ---
 
-## 🍎 Quick start (macOS)
+## 🚀 Quick Start
 
-In the project folder:
+### Windows
+
+1. Download and extract the ZIP
+2. Double-click `setup_windows.bat`
+3. The application opens automatically in your browser
+
+### macOS
+
+1. Download and extract the ZIP
+2. Double-click `CoDIR IA.app` *(recommended)*
+3. If macOS blocks it: System Settings > Privacy & Security > **Open Anyway**
+
+Alternative (opens Terminal): double-click `CoDIR-IA.command`
+
+### Manual Installation
 
 ```bash
-chmod +x mac/launch_user.sh
-./mac/launch_user.sh
+python -m venv .venv
+source .venv/bin/activate      # macOS/Linux
+# or: .venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-See the macOS installation manual for more details.
+**Requirements**: Python 3.10 or higher · At least one API key
 
 ---
 
-## 🔑 API keys configuration (.env)
+## 🔑 API Key Configuration
 
-Edit the `.env` file (auto-created). On Windows, if no API key is detected, `.env` is automatically opened in **Notepad** on first run.
+On first launch, a dialog box prompts you to enter your keys.
 
-Fill in **only** the keys for providers you use:
+You can also access the **Configuration** page from the sidebar:
 
-| Provider | Environment variable |
-|----------|---------------------|
-| OpenAI | `OPENAI_API_KEY` |
-| Anthropic (Claude) | `ANTHROPIC_API_KEY` |
-| Google (Gemini) | `GEMINI_API_KEY` or `GOOGLE_API_KEY` |
-| Mistral | `MISTRAL_API_KEY` |
+| Provider | Variable | Get a key |
+|----------|----------|-----------|
+| OpenAI   | `OPENAI_API_KEY` | [platform.openai.com](https://platform.openai.com) |
+| Anthropic | `ANTHROPIC_API_KEY` | [console.anthropic.com](https://console.anthropic.com) |
+| Google | `GOOGLE_API_KEY` | [aistudio.google.com](https://aistudio.google.com) |
+| Mistral | `MISTRAL_API_KEY` | [console.mistral.ai](https://console.mistral.ai) |
 
-You can also set models (e.g. `GOOGLE_MODEL=gemini-2.5-flash`).
-
----
-
-## 💸 API costs & billing
-
-CoDIR IA is **free and open source**. However:
-
-- **API calls are paid**: each request sent to OpenAI, Anthropic, Google or Mistral is billed by that provider
-- **Direct billing**: costs are charged to **your personal account** with each vendor
-- **Variable pricing**: check each provider's pricing before use
-- **No hidden fees**: CoDIR IA takes no commission
-
-**Tip**: Start with limited quotas on your API accounts to control your spending.
+> ⚠️ **Security**: keys are stored in `secrets.json` *outside the repo*. Never share them.
 
 ---
 
-## 🛡️ Privacy & data handling
+## 🖥️ Usage
 
-### What CoDIR IA does
+### CoDIR Session (main mode)
 
-- **100% local execution** on your machine
-- No remote CoDIR IA server
-- Your files and history stay on your computer
+1. Click **Session CoDIR** in the sidebar
+2. Write your **executive brief** (context, stakes, decisions expected)
+3. Add optional **attachments** (PDF, DOCX, XLSX, CSV…)
+4. Check **Generate PowerPoint** if you want a PPT export
+5. Click **🚀 Launch CoDIR IA session**
+6. Download the **meeting report (.docx)** and/or **summary (.pptx)**
 
-### What AI providers do
+### Free Mode
 
-When you use a provider (OpenAI / Gemini / Claude / Mistral):
+Compare responses from multiple AIs on the same prompt — useful for benchmarking models or exploring creative angles.
 
-- Your **prompts** and **context** are **transmitted to their servers**
-- Each provider applies its own retention policy
-- Data may be used according to their ToS (logs, model improvement, etc.)
+### Session Parameters
 
-### For 100% confidential usage
-
-If you have strict confidentiality requirements, use local models (not included by default in this version).
+| Parameter | Values | Usage |
+|-----------|--------|-------|
+| Mode | Economy / Balanced / Quality | Adjusts temperature and tokens |
+| Temperature | 0.0 → 1.0 | Response creativity |
+| Max tokens | 256 → 8000 | Response length |
 
 ---
 
-## 📁 Project structure
+## 📊 PowerPoint Export
 
+### How to get it
+
+Check **"Generate PowerPoint"** before launching the session.
+
+### Module architecture (`utils/pptx_export.py`)
+
+This is the **core module** called by `app.py`. It works in 3 steps:
+
+1. **Cleaning** the meeting report text (technical noise removal)
+2. **AI call** (active provider) → structured strict JSON generation
+3. **python-pptx rendering** → professional `.pptx` file
+
+The module includes a robustness mechanism: if the AI JSON is invalid, it attempts up to 3 automatic repairs, then falls back to a local heuristic extraction of the report.
+
+### Format v16.3.3.22
+
+The generated PowerPoint contains **5 to 10 slides** (adaptive based on report richness):
+
+| # | Slide | Content |
+|---|-------|---------|
+| 1 | **Title** | Deck name · Topic · Date · Version |
+| 2 | **Context & objectives** | Brief summary + key recommendation |
+| 3–8 | **Topic slides** | 1 theme per slide, 3–5 bullets |
+| Last | **Action plan** | 1 decision per function: Strategy · Marketing · Finance · CEO |
+
+**Design**:
+- **Navy / Gold** palette (#1E2761 / #E8B84B)
+- Title and action plan slides: dark Navy background
+- Content slides: light gray background, Navy header, white card
+- Numbered bullets, color accents per theme (Teal · Blue · Green · Orange · Red · Gold)
+- **No technical noise** (tokens, provider, diagnostics automatically filtered)
+
+> **Note**: an experimental module `pptx_from_cr.py` (specialized market/SWOT/roadmap schema)
+> is available in `experimental/` for future advanced use. It is not used by the application.
+## 📎 File Attachments
+
+**Supported formats**: PDF · DOCX · PPTX · XLSX · XLSM · CSV · TXT · MD
+
+**Limits**: 5 files max · 25 MB total
+
+Content is extracted, cleaned and injected into the **Strategy** prompt as factual context.
+
+---
+
+## 🔧 Troubleshooting
+
+### App won't start (Windows)
+
+```batch
+.venv\Scripts\activate
+python -m streamlit run app.py
 ```
-CoDIR-IA-main/
-├── app.py                 # Streamlit interface
-├── codir_engine.py        # Decision engine
-├── libre_engine.py        # Free mode (AI comparison)
-├── providers/             # API connectors by provider
-├── prompts/               # Role prompts
-├── outputs/               # Local outputs
-├── assets/                # Icons and resources
-├── win/                   # Windows scripts
-├── mac/                   # macOS scripts
-├── setup_windows.bat      # Automatic Windows installation
-├── launch_codir.bat       # Windows launcher
-├── requirements.txt       # Python dependencies
-└── .env.template          # Configuration template
+
+Check the log: `outputs\setup_windows.log`
+
+### App won't start (macOS)
+
+```bash
+source .venv/bin/activate
+python -m streamlit run app.py
 ```
 
+Check the log: `outputs/setup_macos.log`
+
+### "No API key" error
+
+Go to **Configuration**, enter at least one key and click **Test**.
+
+### PPT is empty or contains technical noise
+
+- Ensure the meeting report was generated before the PPT export
+- Increase **Max output tokens** (2000+) in session settings
+- Check `outputs/pptx_attempts_<date>.json` for detailed error info
+
+### Rate limit / provider timeout
+
+The system automatically switches to the next available provider.
+Check **AI Diagnostics** in the interface for details.
+
 ---
 
-## 📄 License
+## 🔒 Security & Privacy
 
-MIT – See the `LICENSE` file for details.
+- API keys are stored in `~/.codir_ia/secrets.json` (outside repo, ignored by `.gitignore`)
+- The application runs **locally** — no data transmitted except to selected AI APIs
+- Attachments are **not saved** to disk
+- See [PRIVACY.md](PRIVACY.md) for the full privacy policy
 
 ---
 
-## 👥 Authors
-
-**Robin Sauzet** – SASU Hi! Gestion  
-**ChatGPT (OpenAI)**  
-**Claude (Anthropic)**
-
-*January 2026*
+*CoDIR IA v16.3.3.22 — © 2025-2026 Robin Sauzet / HiGestion*

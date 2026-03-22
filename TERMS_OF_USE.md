@@ -1,21 +1,91 @@
-# Conditions d’utilisation / Terms of Use (CoDIR IA)
+# Conditions d'utilisation — CoDIR IA v16.3.3.22
 
-## FR — Conditions d’utilisation (résumé pratique)
-En utilisant **CoDIR IA**, vous acceptez les points suivants :
+*Dernière mise à jour : Février 2026*
 
-1. **Outil d’aide à la décision** : CoDIR IA propose des analyses et des pistes. **Vous restez seul responsable** des décisions, actions, résultats et conséquences.
-2. **Pas un conseil professionnel** : les contenus générés ne constituent pas un avis juridique, fiscal, financier, médical ou RH. Faites valider par un professionnel compétent si nécessaire.
-3. **Coûts API** : CoDIR IA est open source, mais l’usage des API (OpenAI, Anthropic, Google, Mistral…) est **payant** selon les tarifs des fournisseurs. Vous êtes responsable de vos comptes et de votre facturation.
-4. **Confidentialité / données** : vos prompts, contextes et éventuelles pièces jointes envoyées via CoDIR IA sont **transmis aux serveurs** du fournisseur IA sélectionné, selon ses propres CGU/politiques.
-5. **Aucune garantie** : le logiciel est fourni **"en l’état"** (voir licence MIT). Aucune disponibilité, exactitude ou performance n’est garantie.
-6. **Sécurité** : vous êtes responsable de l’usage de CoDIR IA sur vos systèmes, de la protection de vos secrets (clés API), et du respect des politiques internes/contractuelles.
+## 1. Acceptation des conditions
+En utilisant CoDIR IA, vous acceptez les présentes conditions d'utilisation.
 
-## EN — Terms of Use (practical summary)
-By using **CoDIR IA**, you agree that:
+## 2. Description du service
+CoDIR IA est un outil d'aide à la décision qui utilise des modèles d'intelligence artificielle pour générer des analyses et recommandations. Il simule un comité de direction avec plusieurs directions spécialisées (Stratégie, Marketing, Finance, Direction Générale).
 
-1. **Decision support tool**: CoDIR IA provides analysis and suggestions. **You remain solely responsible** for decisions, actions, outcomes and consequences.
-2. **Not professional advice**: outputs are not legal, tax, financial, medical or HR advice. Seek qualified professionals when needed.
-3. **API costs**: CoDIR IA is open source, but AI APIs (OpenAI, Anthropic, Google, Mistral…) are **paid** per vendors’ pricing. You manage your own accounts and billing.
-4. **Privacy / data**: prompts/context sent through CoDIR IA are **transmitted to the selected AI vendor’s servers**, under their own ToS/policies.
-5. **No warranty**: software is provided **"as is"** (see MIT license). No guarantee of availability, accuracy or performance.
-6. **Security**: you are responsible for safe usage, protecting secrets (API keys), and complying with internal/contractual constraints.
+## 3. Clés API et coûts
+- Vous êtes responsable de l'obtention et de la sécurisation de vos propres clés API.
+- CoDIR IA ne stocke pas vos clés sur des serveurs externes. Elles restent sur votre machine locale.
+- **Les coûts d'utilisation des APIs sont à votre charge** et facturés directement par les fournisseurs (OpenAI, Anthropic, Google, Mistral).
+
+## 4. Utilisation appropriée
+Vous vous engagez à :
+- Utiliser CoDIR IA de manière légale et éthique
+- Ne pas générer de contenu illégal, nuisible ou discriminatoire
+- Ne pas utiliser l'outil pour des activités frauduleuses
+- Respecter les conditions d'utilisation de chaque provider d'IA
+
+## 5. Limitations importantes
+CoDIR IA :
+- **N'est pas un conseiller professionnel** : Les analyses générées ne remplacent pas l'avis d'experts (avocats, comptables, conseillers financiers).
+- **Ne garantit pas l'exactitude** : Les modèles d'IA peuvent produire des erreurs ou des hallucinations.
+- **Ne prend pas de décisions** : Vous restez seul responsable de vos décisions business.
+
+## 6. Propriété intellectuelle
+- CoDIR IA est distribué sous licence MIT.
+- Vous conservez la propriété de vos briefs et documents uploadés (sous réserve des conditions des providers).
+- Les contenus générés vous appartiennent, sous réserve des conditions de chaque provider d'IA.
+
+## 7. Confidentialité
+Voir [PRIVACY.md](PRIVACY.md) pour la politique de confidentialité.
+
+## 8. Limitation de responsabilité
+CoDIR IA est fourni "tel quel" ("as is"), sans garantie d'aucune sorte. L'auteur et les contributeurs ne peuvent être tenus responsables des dommages directs ou indirects résultant de l'utilisation de l'outil.
+
+## 9. Modifications
+Ces conditions peuvent être modifiées à tout moment. La version en vigueur est celle incluse dans la release que vous utilisez.
+
+## 10. Contact
+Pour toute question : GitHub Issues (voir README).
+
+---
+
+# Terms of Use — CoDIR IA v16.3.3.22
+
+*Last updated: February 2026*
+
+## 1. Acceptance
+By using CoDIR IA, you agree to these Terms of Use.
+
+## 2. Service description
+CoDIR IA is a decision-support tool that uses AI models to generate analyses and recommendations. It simulates an executive committee with multiple departments (Strategy, Marketing, Finance, CEO).
+
+## 3. API keys and costs
+- You are responsible for obtaining and securing your own API keys.
+- CoDIR IA does not store your keys on external servers; they remain on your local machine.
+- **API usage costs are your responsibility** and billed directly by the providers (OpenAI, Anthropic, Google, Mistral).
+
+## 4. Appropriate use
+You agree to:
+- Use CoDIR IA legally and ethically
+- Not generate illegal, harmful, or discriminatory content
+- Not use the tool for fraudulent activities
+- Comply with each AI provider’s terms
+
+## 5. Important limitations
+CoDIR IA:
+- **Is not professional advice**: outputs do not replace expert advice (legal, accounting, financial).
+- **No accuracy guarantee**: AI models may produce errors or hallucinations.
+- **Does not make decisions**: you remain solely responsible for your business decisions.
+
+## 6. Intellectual property
+- CoDIR IA is distributed under the MIT License.
+- You retain ownership of your briefs and uploaded documents (subject to provider terms).
+- Generated content belongs to you, subject to each provider’s terms.
+
+## 7. Privacy
+See [PRIVACY.md](PRIVACY.md).
+
+## 8. Limitation of liability
+CoDIR IA is provided “as is”, without warranties of any kind. The author and contributors are not liable for any direct or indirect damages resulting from use of the tool.
+
+## 9. Changes
+These terms may be updated at any time. The applicable version is the one bundled with the release you use.
+
+## 10. Contact
+Questions: GitHub Issues (see README).
