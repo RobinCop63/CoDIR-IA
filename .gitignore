@@ -1,0 +1,8 @@
+# Audit IP — document confidentiel, jamais publié
+AUDIT_IP_V1.md
+
+# Fichiers système Mac
+.DS_Store
+__pycache__/
+*.pyc
+.env
