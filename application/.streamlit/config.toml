@@ -1,0 +1,51 @@
+# CoDIR-IA — Configuration Streamlit
+# Réglages partagés pour tous les utilisateurs (Mac et Windows).
+#
+# v16.5.74 — Limite upload par fichier 20 Mo (était implicitement plafonné
+# par défaut Streamlit à 200 Mo, mais retours terrain sur des dossiers cotés
+# montraient que les rapports annuels UK 80-150 Mo étaient acceptés et
+# saturaient le budget tokens du FS extractor. 20 Mo couvre 95% des cas
+# de consolidation FR/UK et force l'utilisateur à filtrer en amont les
+# rapports annuels lourds (souvent +90% d'images non utiles à l'analyse
+# financière).
+#
+# Pour les besoins exceptionnels (URD complet > 20 Mo), augmenter ici
+# temporairement et redémarrer l'app.
+#
+# v16.5.76 Phase 7a (audit sécurité 25 mai 2026, VULN-7 validée ChatGPT) :
+# Streamlit écoute par défaut sur 0.0.0.0 → accessible depuis tout le LAN
+# (wifi hôtel, coworking, démos clients). On force le bind sur 127.0.0.1
+# (localhost uniquement) pour aligner avec le positionnement "local-first /
+# secret des affaires". Si un usage LAN intentionnel est requis (démo réseau
+# local), passer temporairement à address = "0.0.0.0" et redémarrer.
+# enableXsrfProtection = true (XSRF) + bind 127.0.0.1 → durcissement standard.
+# v17.1 (P2-15) : enableCORS=false RETIRÉ — incompatible avec enableXsrfProtection=true
+# (Streamlit le forçait à true au démarrage en émettant un warning non UX-friendly).
+# La protection réelle est assurée par XSRF + bind localhost, inchangés.
+# CSRF/XSS depuis pages tierces ouvertes en parallèle dans le navigateur.
+
+[server]
+maxUploadSize = 20
+address = "127.0.0.1"          # v76 Phase 7a — bind localhost uniquement
+enableXsrfProtection = true    # v76 Phase 7a — protection CSRF
+# 9.4.65 — une session déconnectée (veille du PC, onglet mis en sommeil, réunion) était détruite au bout de 120 s, run
+# en cours et résultats compris ; CoDIR IA, local et mono-utilisateur, la conserve 24 heures.
+disconnectedSessionTTL = 86400
+# 9.4.65 — essais natifs des 24 et 25/10/2026 (Windows 11 ARM, Python x64 émulé) : le signal de présence par défaut de
+# Streamlit 1.57 (30 s, délai de réponse de 30 s) restait sans réponse pendant les calculs lourds de fin de run ;
+# la connexion était coupée (« keepalive ping timeout »), le run perdu ou sa trame PowerPoint absente. Application
+# locale et mono-utilisateur : 300 s (Streamlit aligne le délai de réponse sur cette valeur).
+websocketPingInterval = 300
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# 9.4.65 — essai natif Windows du 20/10/2026 : la barre d'outils de Streamlit, en mode développeur sur localhost,
+# affichait « Deploy » (publication de l'application sur le cloud de Streamlit), contraire au fonctionnement local
+# de CoDIR IA, et des options de développeur. Le mode « minimal » les masque.
+toolbarMode = "minimal"
+
+[theme]
+# Theme léger par défaut (cohérent avec la sortie DOCX/PPTX)
+base = "light"

@@ -1,0 +1,3467 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:020d76c8-6b27-4063-a9a1-25fc27bdfb98",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-17T00:00:00Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "CoDIR-IA SBOM generator",
+          "version": "v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "CoDIR-IA",
+      "version": "v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65",
+      "bom-ref": "pkg:generic/codir-ia@v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65",
+      "supplier": {
+        "name": "Vauquigneux Gestion SASU"
+      },
+      "licenses": [
+        {
+          "license": {
+            "id": "FSL-1.1-ALv2"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.release-status",
+          "value": "supervised-release"
+        },
+        {
+          "name": "codir.requirements-lock-sha256",
+          "value": "418aa58eddcc1771f3fc50f196a1a130f52a82d72ade2422289f58739fda02f2"
+        },
+        {
+          "name": "codir.requirements-component-count",
+          "value": "83"
+        },
+        {
+          "name": "codir.component-license-known-count",
+          "value": "83"
+        },
+        {
+          "name": "codir.vulnerability-scan-status",
+          "value": "EXECUTED_2026-10-17 — pip-audit 2.9.0 sur la base OSV, verrou SHA-256 418aa58eddcc1771f3fc50f196a1a130f52a82d72ade2422289f58739fda02f2, 83 pins : aucune vulnérabilité connue (starlette ramené de 1.8.0 à 1.7.0 : la 1.8.0, publiée le 13/10, cassait le serveur de Streamlit 1.57 sur les contenus non compressés ; scan du 2026-10-14 sur le verrou b0b98778… également propre)"
+        },
+        {
+          "name": "codir.option-b",
+          "value": "deliver-everything-flag-in-place-with-documented-exceptions"
+        },
+        {
+          "name": "codir.ocr-document-status",
+          "value": "tri-state"
+        },
+        {
+          "name": "codir.legal-threshold-claim-gate",
+          "value": "enabled"
+        },
+        {
+          "name": "codir.vulnerability-scan",
+          "value": "EXECUTED_2026-10-17 — pip-audit 2.9.0 sur la base OSV, verrou SHA-256 418aa58eddcc1771f3fc50f196a1a130f52a82d72ade2422289f58739fda02f2, 83 pins : aucune vulnérabilité connue (starlette ramené de 1.8.0 à 1.7.0 : la 1.8.0, publiée le 13/10, cassait le serveur de Streamlit 1.57 sur les contenus non compressés ; scan du 2026-10-14 sur le verrou b0b98778… également propre)"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "altair",
+      "version": "6.1.0",
+      "bom-ref": "pkg:pypi/altair@6.1.0",
+      "purl": "pkg:pypi/altair@6.1.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "altair-6.1.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "fdf5fd939512e5b2fc4441c82dfd2635e706defbd037db0ac429ef5ddce66c3b"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "annotated-types",
+      "version": "0.7.0",
+      "bom-ref": "pkg:pypi/annotated-types@0.7.0",
+      "purl": "pkg:pypi/annotated-types@0.7.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "annotated_types-0.7.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Reusable constraint types to use with typing.Annotated",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "anthropic",
+      "version": "0.104.1",
+      "bom-ref": "pkg:pypi/anthropic@0.104.1",
+      "purl": "pkg:pypi/anthropic@0.104.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "anthropic-0.104.1-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "35c8cb456f5a4405aafe1f10f03f6fcc54fa51fa8ec01d655cc4b437d120e9b7"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "anyio",
+      "version": "4.14.2",
+      "bom-ref": "pkg:pypi/anyio@4.14.2",
+      "purl": "pkg:pypi/anyio@4.14.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "anyio-4.14.2-py3-none-any.whl"
+        }
+      ],
+      "description": "High-level concurrency and networking framework on top of asyncio or Trio",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Documentation"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "attrs",
+      "version": "26.1.0",
+      "bom-ref": "pkg:pypi/attrs@26.1.0",
+      "purl": "pkg:pypi/attrs@26.1.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "attrs-26.1.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Classes Without Boilerplate",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Documentation"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "blinker",
+      "version": "1.9.0",
+      "bom-ref": "pkg:pypi/blinker@1.9.0",
+      "purl": "pkg:pypi/blinker@1.9.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "blinker-1.9.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cachetools",
+      "version": "7.1.4",
+      "bom-ref": "pkg:pypi/cachetools@7.1.4",
+      "purl": "pkg:pypi/cachetools@7.1.4",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "cachetools-7.1.4-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Extensible memoizing collections and decorators",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "323dc4127934744db5b54eb4924482d7edafbf9554e820d1531c2e08c0e4ef54"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "certifi",
+      "version": "2026.5.20",
+      "bom-ref": "pkg:pypi/certifi@2026.5.20",
+      "purl": "pkg:pypi/certifi@2026.5.20",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "certifi-2026.5.20-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Python package for providing Mozilla's CA Bundle.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/certifi/python-certifi"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3c52e209ba0a4ad7aebe60436a4ab349c39e1e602e8c134221e546902ad25897"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cffi",
+      "version": "2.0.0",
+      "bom-ref": "pkg:pypi/cffi@2.0.0",
+      "purl": "pkg:pypi/cffi@2.0.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Foreign Function Interface for Python calling C code.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Documentation"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3e17ed538242334bf70832644a32a7aae3d83b57567f9fd60a26257e992b79ba"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "charset-normalizer",
+      "version": "3.4.7",
+      "bom-ref": "pkg:pypi/charset-normalizer@3.4.7",
+      "purl": "pkg:pypi/charset-normalizer@3.4.7",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "charset_normalizer-3.4.7-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license-field:2026-09-15"
+        }
+      ],
+      "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changelog"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5649fd1c7bade02f320a462fdefd0b4bd3ce036065836d4f42e0de958038e116"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "click",
+      "version": "8.4.1",
+      "bom-ref": "pkg:pypi/click@8.4.1",
+      "purl": "pkg:pypi/click@8.4.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "click-8.4.1-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Composable command line interface toolkit",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changes"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "482be17c6991b8c19c5429a1e995d9b0efdbb63172824c41f99965dc0ade8ec2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cryptography",
+      "version": "50.0.2",
+      "bom-ref": "pkg:pypi/cryptography@50.0.2",
+      "purl": "pkg:pypi/cryptography@50.0.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR BSD-3-Clause"
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl"
+        }
+      ],
+      "description": "cryptography is a package which provides cryptographic recipes and primitives to Python developers.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9dab55f57c74c3cad24c323bacbbd04be4705ba6eb0d92e920b1fc4837ed5079"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "distro",
+      "version": "1.9.0",
+      "bom-ref": "pkg:pypi/distro@1.9.0",
+      "purl": "pkg:pypi/distro@1.9.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "distro-1.9.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "docstring-parser",
+      "version": "0.18.0",
+      "bom-ref": "pkg:pypi/docstring-parser@0.18.0",
+      "purl": "pkg:pypi/docstring-parser@0.18.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "docstring_parser-0.18.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b3fcbed555c47d8479be0796ef7e19c2670d428d72e96da63f3a40122860374b"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "et-xmlfile",
+      "version": "2.0.0",
+      "bom-ref": "pkg:pypi/et-xmlfile@2.0.0",
+      "purl": "pkg:pypi/et-xmlfile@2.0.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "et_xmlfile-2.0.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "An implementation of lxml.xmlfile for the standard library",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://foss.heptapod.net/openpyxl/et_xmlfile"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "eval-type-backport",
+      "version": "0.3.1",
+      "bom-ref": "pkg:pypi/eval-type-backport@0.3.1",
+      "purl": "pkg:pypi/eval-type-backport@0.3.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "eval_type_backport-0.3.1-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "279ab641905e9f11129f56a8a78f493518515b83402b860f6f06dd7c011fdfa8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gitdb",
+      "version": "4.0.12",
+      "bom-ref": "pkg:pypi/gitdb@4.0.12",
+      "purl": "pkg:pypi/gitdb@4.0.12",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "gitdb-4.0.12-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "67073e15955400952c6565cc3e707c554a4eea2e428946f7a4c162fab9bd9bcf"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gitpython",
+      "version": "3.2.1",
+      "bom-ref": "pkg:pypi/gitpython@3.2.1",
+      "purl": "pkg:pypi/gitpython@3.2.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license-field:2026-09-15"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "gitpython-3.2.1-py3-none-any.whl"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d66b0832aa8755c1a84892937282df0befb16c97e5a64aeebd68be9c5e323f53"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "google-auth",
+      "version": "2.53.0",
+      "bom-ref": "pkg:pypi/google-auth@2.53.0",
+      "purl": "pkg:pypi/google-auth@2.53.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "google_auth-2.53.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6e7449917c599b35126a99ec268ec6880301f2fea41dce198fe8fd83ff642b68"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "google-genai",
+      "version": "2.6.0",
+      "bom-ref": "pkg:pypi/google-genai@2.6.0",
+      "purl": "pkg:pypi/google-genai@2.6.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "google_genai-2.6.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "272b6f6320f5d355735241ad441f972af095ec80dc10cb075cb430d96721648a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "h11",
+      "version": "0.16.0",
+      "bom-ref": "pkg:pypi/h11@0.16.0",
+      "purl": "pkg:pypi/h11@0.16.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "h11-0.16.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python-hyper/h11"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httpcore",
+      "version": "1.0.9",
+      "bom-ref": "pkg:pypi/httpcore@1.0.9",
+      "purl": "pkg:pypi/httpcore@1.0.9",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "httpcore-1.0.9-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "A minimal low-level HTTP client.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Documentation"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httptools",
+      "version": "0.7.1",
+      "bom-ref": "pkg:pypi/httptools@0.7.1",
+      "purl": "pkg:pypi/httptools@0.7.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "httptools-0.7.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "A collection of framework independent HTTP protocol utils.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2c15f37ef679ab9ecc06bfc4e6e8628c32a8e4b305459de7cf6785acd57e4d03"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httpx",
+      "version": "0.28.1",
+      "bom-ref": "pkg:pypi/httpx@0.28.1",
+      "purl": "pkg:pypi/httpx@0.28.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "httpx-0.28.1-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "The next generation HTTP client.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changelog"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "idna",
+      "version": "3.16",
+      "bom-ref": "pkg:pypi/idna@3.16",
+      "purl": "pkg:pypi/idna@3.16",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "idna-3.16-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Internationalized Domain Names in Applications (IDNA)",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changelog"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cc246e3a3f89580c3a951b5ad298ca4638078b2cdd4f115654332b5c26daded5"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "importlib-metadata",
+      "version": "8.7.1",
+      "bom-ref": "pkg:pypi/importlib-metadata@8.7.1",
+      "purl": "pkg:pypi/importlib-metadata@8.7.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "importlib_metadata-8.7.1-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Read metadata from Python packages",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Source"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5a1f80bf1daa489495071efbb095d75a634cf28a8bc299581244063b53176151"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "bom-ref": "pkg:pypi/iniconfig@2.3.0",
+      "purl": "pkg:pypi/iniconfig@2.3.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "iniconfig-2.3.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "brain-dead simple config-ini parsing",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "itsdangerous",
+      "version": "2.2.0",
+      "bom-ref": "pkg:pypi/itsdangerous@2.2.0",
+      "purl": "pkg:pypi/itsdangerous@2.2.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "itsdangerous-2.2.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Safely pass data to untrusted environments and back.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changes"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jinja2",
+      "version": "3.1.6",
+      "bom-ref": "pkg:pypi/jinja2@3.1.6",
+      "purl": "pkg:pypi/jinja2@3.1.6",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "jinja2-3.1.6-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "A very fast and expressive template engine.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changes"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jiter",
+      "version": "0.15.0",
+      "bom-ref": "pkg:pypi/jiter@0.15.0",
+      "purl": "pkg:pypi/jiter@0.15.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "jiter-0.15.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "fa248c9eb220197d363f688818dac2fd4b2f0cd7d843ca7105d652034823427d"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jsonpath-python",
+      "version": "1.1.6",
+      "bom-ref": "pkg:pypi/jsonpath-python@1.1.6",
+      "purl": "pkg:pypi/jsonpath-python@1.1.6",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "jsonpath_python-1.1.6-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a1c50afd8d3fbbaf47a4873bc890dcb3c15da96f5c020327977d844d8731a2d4"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "bom-ref": "pkg:pypi/jsonschema@4.26.0",
+      "purl": "pkg:pypi/jsonschema@4.26.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "jsonschema-4.26.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "An implementation of JSON Schema validation for Python",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "bom-ref": "pkg:pypi/jsonschema-specifications@2025.9.1",
+      "purl": "pkg:pypi/jsonschema-specifications@2025.9.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "jsonschema_specifications-2025.9.1-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "The JSON Schema meta-schemas and vocabularies, exposed as a Registry",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Documentation"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lxml",
+      "version": "6.1.1",
+      "bom-ref": "pkg:pypi/lxml@6.1.1",
+      "purl": "pkg:pypi/lxml@6.1.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "lxml-6.1.1-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license-field:2026-09-15"
+        }
+      ],
+      "description": "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://lxml.de/"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ebe6af670449830d6d9b752c256a983291c766a1365ba5d5460048f9e33a7818"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "markupsafe",
+      "version": "3.0.3",
+      "bom-ref": "pkg:pypi/markupsafe@3.0.3",
+      "purl": "pkg:pypi/markupsafe@3.0.3",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Safely add untrusted strings to HTML/XML markup.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Donate"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d6dd0be5b5b189d31db7cda48b91d7e0a9795f31430b7f271219ab30f1d3ac9d"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mistralai",
+      "version": "2.4.5",
+      "bom-ref": "pkg:pypi/mistralai@2.4.5",
+      "purl": "pkg:pypi/mistralai@2.4.5",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "mistralai-2.4.5-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:not-resolved:2026-09-15"
+        },
+        {
+          "name": "codir:license-evidence",
+          "value": "licence établie sur le paquet exact du verrou (wheel SHA-256 bf3b6550…) qui embarque le texte Apache-2.0 ; métadonnées PyPI sans champ de licence"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bf3b6550258ab16dec8547b90e9c18bebf9099f55b7fc25a884bf0bbeffced0f"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "narwhals",
+      "version": "2.21.2",
+      "bom-ref": "pkg:pypi/narwhals@2.21.2",
+      "purl": "pkg:pypi/narwhals@2.21.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "narwhals-2.21.2-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Extremely lightweight compatibility layer between dataframe libraries",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7bb57c3700486039215455b9bf2d64261915cc0fd845cc30272d631df696b251"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "2.4.6",
+      "bom-ref": "pkg:pypi/numpy@2.4.6",
+      "purl": "pkg:pypi/numpy@2.4.6",
+      "scope": "required",
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "numpy-2.4.6-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Fundamental package for array computing in Python",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "90f9849678c75fe7afa2d348ac842c168b0a4d3d61919687216dfc547976d853"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openai",
+      "version": "2.38.0",
+      "bom-ref": "pkg:pypi/openai@2.38.0",
+      "purl": "pkg:pypi/openai@2.38.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "openai-2.38.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ec6661c57b2dcc47414a767e6e3335c7ed3d19c9696999283a3c82e95c756a3c"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openpyxl",
+      "version": "3.1.5",
+      "bom-ref": "pkg:pypi/openpyxl@3.1.5",
+      "purl": "pkg:pypi/openpyxl@3.1.5",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "openpyxl-3.1.5-py2.py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "A Python library to read/write Excel 2010 xlsx/xlsm files",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://openpyxl.readthedocs.io"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "opentelemetry-api",
+      "version": "1.39.1",
+      "bom-ref": "pkg:pypi/opentelemetry-api@1.39.1",
+      "purl": "pkg:pypi/opentelemetry-api@1.39.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "opentelemetry_api-1.39.1-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "OpenTelemetry Python API",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2edd8463432a7f8443edce90972169b195e7d6a05500cd29e6d13898187c9950"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "opentelemetry-semantic-conventions",
+      "version": "0.60b1",
+      "bom-ref": "pkg:pypi/opentelemetry-semantic-conventions@0.60b1",
+      "purl": "pkg:pypi/opentelemetry-semantic-conventions@0.60b1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "opentelemetry_semantic_conventions-0.60b1-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "OpenTelemetry Semantic Conventions",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9fa8c8b0c110da289809292b0591220d3a7b53c1526a23021e977d68597893fb"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "packaging",
+      "version": "26.2",
+      "bom-ref": "pkg:pypi/packaging@26.2",
+      "purl": "pkg:pypi/packaging@26.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR BSD-2-Clause"
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "packaging-26.2-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Core utilities for Python packages",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Documentation"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pandas",
+      "version": "3.0.3",
+      "bom-ref": "pkg:pypi/pandas@3.0.3",
+      "purl": "pkg:pypi/pandas@3.0.3",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Powerful data structures for data analysis, time series, and statistics",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pandas.pydata.org"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6dc0b3fd2169c9157deed50b4d519553a3655c8c6a96027136d654592be973a9"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pdfminer-six",
+      "version": "20251230",
+      "bom-ref": "pkg:pypi/pdfminer-six@20251230",
+      "purl": "pkg:pypi/pdfminer-six@20251230",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pdfminer_six-20251230-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "PDF parser and analyzer",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9ff2e3466a7dfc6de6fd779478850b6b7c2d9e9405aa2a5869376a822771f485"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pdfplumber",
+      "version": "0.11.9",
+      "bom-ref": "pkg:pypi/pdfplumber@0.11.9",
+      "purl": "pkg:pypi/pdfplumber@0.11.9",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pdfplumber-0.11.9-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Plumb a PDF for detailed information about each char, rectangle, and line.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jsvine/pdfplumber"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "33ec5580959ba524e9100138746e090879504c42955df1b8a997604dd326c443"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pillow",
+      "version": "12.3.0",
+      "bom-ref": "pkg:pypi/pillow@12.3.0",
+      "purl": "pkg:pypi/pillow@12.3.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT-CMU"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+        }
+      ],
+      "description": "Python Imaging Library (fork)",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Release notes"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "78cb2c6865a35ab8ff8b75fd122f6033b92a62c82801110e48ddd6c936a45d91"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pluggy",
+      "version": "1.6.0",
+      "bom-ref": "pkg:pypi/pluggy@1.6.0",
+      "purl": "pkg:pypi/pluggy@1.6.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pluggy-1.6.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "plugin and hook calling mechanisms for python",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "protobuf",
+      "version": "7.35.0",
+      "bom-ref": "pkg:pypi/protobuf@7.35.0",
+      "purl": "pkg:pypi/protobuf@7.35.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "3-Clause BSD License"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "protobuf-7.35.0-cp310-abi3-manylinux2014_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license-field-verbatim:2026-09-15"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://developers.google.com/protocol-buffers/"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6c0f98f10c8a05ea30f8993dfef2de093d27b490fdae78bb60c8343795d55011"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyarrow",
+      "version": "24.0.0",
+      "bom-ref": "pkg:pypi/pyarrow@24.0.0",
+      "purl": "pkg:pypi/pyarrow@24.0.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pyarrow-24.0.0-cp312-cp312-manylinux_2_28_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6165461f55ef6314f026de6638d661188e3455d3ec49834556a0ebbdbace18bb"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyasn1",
+      "version": "0.6.4",
+      "bom-ref": "pkg:pypi/pyasn1@0.6.4",
+      "purl": "pkg:pypi/pyasn1@0.6.4",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license-field:2026-09-15"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pyasn1-0.6.4-py3-none-any.whl"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "deda9277cfd454080ec40b207fb6df82206a3a2688735233cdcd8d3d565f088b"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyasn1-modules",
+      "version": "0.4.2",
+      "bom-ref": "pkg:pypi/pyasn1-modules@0.4.2",
+      "purl": "pkg:pypi/pyasn1-modules@0.4.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pyasn1_modules-0.4.2-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "29253a9207ce32b64c3ac6600edc75368f98473906e8fd1043bd6b5b1de2c14a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pycparser",
+      "version": "3.0",
+      "bom-ref": "pkg:pypi/pycparser@3.0",
+      "purl": "pkg:pypi/pycparser@3.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pycparser-3.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "C parser in Python",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pydantic",
+      "version": "2.13.4",
+      "bom-ref": "pkg:pypi/pydantic@2.13.4",
+      "purl": "pkg:pypi/pydantic@2.13.4",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pydantic-2.13.4-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Data validation using Python type hints",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "45a282cde31d808236fd7ea9d919b128653c8b38b393d1c4ab335c62924d9aba"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pydantic-core",
+      "version": "2.46.4",
+      "bom-ref": "pkg:pypi/pydantic-core@2.46.4",
+      "purl": "pkg:pypi/pydantic-core@2.46.4",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Core functionality for Pydantic validation and serialization",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pydantic/pydantic"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "926c9541b14b12b1681dca8a0b75feb510b06c6341b70a8e500c2fdcff837cce"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pydeck",
+      "version": "0.9.2",
+      "bom-ref": "pkg:pypi/pydeck@0.9.2",
+      "purl": "pkg:pypi/pydeck@0.9.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pydeck-0.9.2-py2.py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license-field:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8213dfeacc5f6bfe6825f61c8ee34e3850e8a31fc43924379ec98edb34a75b25"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pygments",
+      "version": "2.20.0",
+      "bom-ref": "pkg:pypi/pygments@2.20.0",
+      "purl": "pkg:pypi/pygments@2.20.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pygments-2.20.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Pygments is a syntax highlighting package written in Python.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pypdfium2",
+      "version": "5.8.0",
+      "bom-ref": "pkg:pypi/pypdfium2@5.8.0",
+      "purl": "pkg:pypi/pypdfium2@5.8.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause, Apache-2.0, dependency licenses"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pypdfium2-5.8.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license-field-verbatim:2026-09-15"
+        }
+      ],
+      "description": "Python bindings to PDFium",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pypdfium2-team/pypdfium2"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "26c1089cdbbdc7fe1248f6d17fe3f30214be4f287dd0196b31aaee18a1564240"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest",
+      "version": "9.0.3",
+      "bom-ref": "pkg:pypi/pytest@9.0.3",
+      "purl": "pkg:pypi/pytest@9.0.3",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "pytest-9.0.3-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "pytest: simple powerful testing with Python",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changelog"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2c5efc453d45394fdd706ade797c0a81091eccd1d6e4bccfcd476e2b8e0ab5d9"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "bom-ref": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "scope": "required",
+      "licenses": [
+        {
+          "expression": "Apache-2.0 AND BSD-3-Clause"
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Extensions to the standard Python datetime module",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dateutil/dateutil"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-docx",
+      "version": "1.2.0",
+      "bom-ref": "pkg:pypi/python-docx@1.2.0",
+      "purl": "pkg:pypi/python-docx@1.2.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "python_docx-1.2.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Create, read, and update Microsoft Word .docx files.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changelog"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3fd478f3250fbbbfd3b94fe1e985955737c145627498896a8a6bf81f4baf66c7"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-dotenv",
+      "version": "1.2.2",
+      "bom-ref": "pkg:pypi/python-dotenv@1.2.2",
+      "purl": "pkg:pypi/python-dotenv@1.2.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "python_dotenv-1.2.2-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license-field:2026-09-15"
+        }
+      ],
+      "description": "Read key-value pairs from a .env file and set them as environment variables",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Source"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1d8214789a24de455a8b8bd8ae6fe3c6b69a5e3d64aa8a8e5d68e694bbcb285a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "bom-ref": "pkg:pypi/python-multipart@0.0.32",
+      "purl": "pkg:pypi/python-multipart@0.0.32",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "python_multipart-0.0.32-py3-none-any.whl"
+        }
+      ],
+      "description": "A streaming multipart parser for Python",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ff6d3f776f16878c894e52e107296ffc890e913c611b1a4ec6c44e2821fe2e23"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-pptx",
+      "version": "1.0.2",
+      "bom-ref": "pkg:pypi/python-pptx@1.0.2",
+      "purl": "pkg:pypi/python-pptx@1.0.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "python_pptx-1.0.2-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Create, read, and update PowerPoint 2007+ (.pptx) files.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changelog"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "160838e0b8565a8b1f67947675886e9fea18aa5e795db7ae531606d68e785cba"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "referencing",
+      "version": "0.37.0",
+      "bom-ref": "pkg:pypi/referencing@0.37.0",
+      "purl": "pkg:pypi/referencing@0.37.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "referencing-0.37.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "JSON Referencing + Python",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Documentation"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "requests",
+      "version": "2.34.2",
+      "bom-ref": "pkg:pypi/requests@2.34.2",
+      "purl": "pkg:pypi/requests@2.34.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "requests-2.34.2-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Python HTTP for Humans.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://requests.readthedocs.io"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rpds-py",
+      "version": "0.30.0",
+      "bom-ref": "pkg:pypi/rpds-py@0.30.0",
+      "purl": "pkg:pypi/rpds-py@0.30.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "rpds_py-0.30.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Python bindings to Rust's persistent data structures (rpds)",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Documentation"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "47f236970bccb2233267d89173d3ad2703cd36a0e2a6e92d0560d333871a3d23"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "six",
+      "version": "1.17.0",
+      "bom-ref": "pkg:pypi/six@1.17.0",
+      "purl": "pkg:pypi/six@1.17.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "six-1.17.0-py2.py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "Python 2 and 3 compatibility utilities",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/benjaminp/six"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "smmap",
+      "version": "5.0.3",
+      "bom-ref": "pkg:pypi/smmap@5.0.3",
+      "purl": "pkg:pypi/smmap@5.0.3",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "smmap-5.0.3-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c106e05d5a61449cf6ba9a1e650227ecfb141590d2a98412103ff35d89fc7b2f"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sniffio",
+      "version": "1.3.1",
+      "bom-ref": "pkg:pypi/sniffio@1.3.1",
+      "purl": "pkg:pypi/sniffio@1.3.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "expression": "Apache-2.0 AND MIT"
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "sniffio-1.3.1-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "starlette",
+      "version": "1.7.0",
+      "bom-ref": "pkg:pypi/starlette@1.7.0",
+      "purl": "pkg:pypi/starlette@1.7.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "starlette-1.7.0-py3-none-any.whl"
+        }
+      ],
+      "description": "The little ASGI library that shines.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "67f8e99895493dd2911a03f11314af6ceebeae4e704bb9f43dfc6a9db151c93e"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "streamlit",
+      "version": "1.57.0",
+      "bom-ref": "pkg:pypi/streamlit@1.57.0",
+      "purl": "pkg:pypi/streamlit@1.57.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "streamlit-1.57.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0d1d41972aeade5637dbb0e7f0eefa5312272f85304923d240a1b1f0475249c8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tenacity",
+      "version": "9.1.4",
+      "bom-ref": "pkg:pypi/tenacity@9.1.4",
+      "purl": "pkg:pypi/tenacity@9.1.4",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "tenacity-9.1.4-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6095a360c919085f28c6527de529e76a06ad89b23659fa881ae0649b867a9d55"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "toml",
+      "version": "0.10.2",
+      "bom-ref": "pkg:pypi/toml@0.10.2",
+      "purl": "pkg:pypi/toml@0.10.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "toml-0.10.2-py2.py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tqdm",
+      "version": "4.67.3",
+      "bom-ref": "pkg:pypi/tqdm@4.67.3",
+      "purl": "pkg:pypi/tqdm@4.67.3",
+      "scope": "required",
+      "licenses": [
+        {
+          "expression": "MPL-2.0 AND MIT"
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "tqdm-4.67.3-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license-field:2026-09-15"
+        }
+      ],
+      "description": "Fast, Extensible Progress Meter",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ee1e4c0e59148062281c49d80b25b67771a127c85fc9676d3be5f243206826bf"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typing-extensions",
+      "version": "4.15.0",
+      "bom-ref": "pkg:pypi/typing-extensions@4.15.0",
+      "purl": "pkg:pypi/typing-extensions@4.15.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "PSF-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "typing_extensions-4.15.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Backported and Experimental Type Hints for Python 3.9+",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Bug Tracker"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typing-inspection",
+      "version": "0.4.2",
+      "bom-ref": "pkg:pypi/typing-inspection@0.4.2",
+      "purl": "pkg:pypi/typing-inspection@0.4.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "typing_inspection-0.4.2-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Runtime typing introspection tools",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4ed1cacbdc298c220f1bd249ed5287caa16f34d44ef4e9c3d0cbad5b521545e7"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "urllib3",
+      "version": "2.8.0",
+      "bom-ref": "pkg:pypi/urllib3@2.8.0",
+      "purl": "pkg:pypi/urllib3@2.8.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "urllib3-2.8.0-py3-none-any.whl"
+        }
+      ],
+      "description": "HTTP library with thread-safe connection pooling, file post, and more.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changelog"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uvicorn",
+      "version": "0.48.0",
+      "bom-ref": "pkg:pypi/uvicorn@0.48.0",
+      "purl": "pkg:pypi/uvicorn@0.48.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "uvicorn-0.48.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "The lightning-fast ASGI server.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Changelog"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "48097851328b87ec36117d3d575234519eb58c2b22d79666e9bbc6c49a761dad"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "watchdog",
+      "version": "6.0.0",
+      "bom-ref": "pkg:pypi/watchdog@6.0.0",
+      "purl": "pkg:pypi/watchdog@6.0.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "20ffe5b202af80ab4266dcd3e91aae72bf2da48c0d33bdb15c66658e685e94e2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "websockets",
+      "version": "16.0",
+      "bom-ref": "pkg:pypi/websockets@16.0",
+      "purl": "pkg:pypi/websockets@16.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "websockets-16.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "An implementation of the WebSocket Protocol (RFC 6455 & 7692)",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Homepage"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9b5aca38b67492ef518a8ab76851862488a478602229112c4b0d58d63a7a4d5c"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "xlsxwriter",
+      "version": "3.2.9",
+      "bom-ref": "pkg:pypi/xlsxwriter@3.2.9",
+      "purl": "pkg:pypi/xlsxwriter@3.2.9",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "xlsxwriter-3.2.9-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:classifiers:2026-09-15"
+        }
+      ],
+      "description": "A Python module for creating Excel XLSX files.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jmcnamara/XlsxWriter"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9a5db42bc5dff014806c58a20b9eae7322a134abb6fce3c92c181bfb275ec5b3"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "zipp",
+      "version": "4.1.0",
+      "bom-ref": "pkg:pypi/zipp@4.1.0",
+      "purl": "pkg:pypi/zipp@4.1.0",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "codir.lock-source",
+          "value": "requirements.lock"
+        },
+        {
+          "name": "codir.artifact-filename",
+          "value": "zipp-4.1.0-py3-none-any.whl"
+        },
+        {
+          "name": "codir.license-source",
+          "value": "pypi-json:license_expression:2026-09-15"
+        }
+      ],
+      "description": "Backport of pathlib-compatible object wrapper for zip files",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "Source"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "25ad4e16390cd314347dd8f1de67a2ac538ae658ed4ab9db16029c07c188e97f"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:generic/codir-ia@v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65",
+      "dependsOn": [
+        "pkg:pypi/altair@6.1.0",
+        "pkg:pypi/annotated-types@0.7.0",
+        "pkg:pypi/anthropic@0.104.1",
+        "pkg:pypi/anyio@4.14.2",
+        "pkg:pypi/attrs@26.1.0",
+        "pkg:pypi/blinker@1.9.0",
+        "pkg:pypi/cachetools@7.1.4",
+        "pkg:pypi/certifi@2026.5.20",
+        "pkg:pypi/cffi@2.0.0",
+        "pkg:pypi/charset-normalizer@3.4.7",
+        "pkg:pypi/click@8.4.1",
+        "pkg:pypi/cryptography@50.0.2",
+        "pkg:pypi/distro@1.9.0",
+        "pkg:pypi/docstring-parser@0.18.0",
+        "pkg:pypi/et-xmlfile@2.0.0",
+        "pkg:pypi/eval-type-backport@0.3.1",
+        "pkg:pypi/gitdb@4.0.12",
+        "pkg:pypi/gitpython@3.2.1",
+        "pkg:pypi/google-auth@2.53.0",
+        "pkg:pypi/google-genai@2.6.0",
+        "pkg:pypi/h11@0.16.0",
+        "pkg:pypi/httpcore@1.0.9",
+        "pkg:pypi/httptools@0.7.1",
+        "pkg:pypi/httpx@0.28.1",
+        "pkg:pypi/idna@3.16",
+        "pkg:pypi/importlib-metadata@8.7.1",
+        "pkg:pypi/iniconfig@2.3.0",
+        "pkg:pypi/itsdangerous@2.2.0",
+        "pkg:pypi/jinja2@3.1.6",
+        "pkg:pypi/jiter@0.15.0",
+        "pkg:pypi/jsonpath-python@1.1.6",
+        "pkg:pypi/jsonschema@4.26.0",
+        "pkg:pypi/jsonschema-specifications@2025.9.1",
+        "pkg:pypi/lxml@6.1.1",
+        "pkg:pypi/markupsafe@3.0.3",
+        "pkg:pypi/mistralai@2.4.5",
+        "pkg:pypi/narwhals@2.21.2",
+        "pkg:pypi/numpy@2.4.6",
+        "pkg:pypi/openai@2.38.0",
+        "pkg:pypi/openpyxl@3.1.5",
+        "pkg:pypi/opentelemetry-api@1.39.1",
+        "pkg:pypi/opentelemetry-semantic-conventions@0.60b1",
+        "pkg:pypi/packaging@26.2",
+        "pkg:pypi/pandas@3.0.3",
+        "pkg:pypi/pdfminer-six@20251230",
+        "pkg:pypi/pdfplumber@0.11.9",
+        "pkg:pypi/pillow@12.3.0",
+        "pkg:pypi/pluggy@1.6.0",
+        "pkg:pypi/protobuf@7.35.0",
+        "pkg:pypi/pyarrow@24.0.0",
+        "pkg:pypi/pyasn1@0.6.4",
+        "pkg:pypi/pyasn1-modules@0.4.2",
+        "pkg:pypi/pycparser@3.0",
+        "pkg:pypi/pydantic@2.13.4",
+        "pkg:pypi/pydantic-core@2.46.4",
+        "pkg:pypi/pydeck@0.9.2",
+        "pkg:pypi/pygments@2.20.0",
+        "pkg:pypi/pypdfium2@5.8.0",
+        "pkg:pypi/pytest@9.0.3",
+        "pkg:pypi/python-dateutil@2.9.0.post0",
+        "pkg:pypi/python-docx@1.2.0",
+        "pkg:pypi/python-dotenv@1.2.2",
+        "pkg:pypi/python-multipart@0.0.32",
+        "pkg:pypi/python-pptx@1.0.2",
+        "pkg:pypi/referencing@0.37.0",
+        "pkg:pypi/requests@2.34.2",
+        "pkg:pypi/rpds-py@0.30.0",
+        "pkg:pypi/six@1.17.0",
+        "pkg:pypi/smmap@5.0.3",
+        "pkg:pypi/sniffio@1.3.1",
+        "pkg:pypi/starlette@1.7.0",
+        "pkg:pypi/streamlit@1.57.0",
+        "pkg:pypi/tenacity@9.1.4",
+        "pkg:pypi/toml@0.10.2",
+        "pkg:pypi/tqdm@4.67.3",
+        "pkg:pypi/typing-extensions@4.15.0",
+        "pkg:pypi/typing-inspection@0.4.2",
+        "pkg:pypi/urllib3@2.8.0",
+        "pkg:pypi/uvicorn@0.48.0",
+        "pkg:pypi/watchdog@6.0.0",
+        "pkg:pypi/websockets@16.0",
+        "pkg:pypi/xlsxwriter@3.2.9",
+        "pkg:pypi/zipp@4.1.0"
+      ]
+    }
+  ]
+}

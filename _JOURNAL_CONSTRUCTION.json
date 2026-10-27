@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-25",
+  "fichiers_copies": 252,
+  "fichiers_dans_archive": 254,
+  "fichiers_couverts_par_le_manifeste": 252,
+  "hors_manifeste": [
+    "SHA256SUMS",
+    "_JOURNAL_CONSTRUCTION.json"
+  ],
+  "note_comptage": "fichiers_dans_archive = fichiers_couverts_par_le_manifeste + les deux fichiers hors manifeste (le manifeste ne peut pas contenir sa propre empreinte, et le journal est écrit après lui)",
+  "version": "v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65",
+  "manquants": [],
+  "controles_bloquants": []
+}

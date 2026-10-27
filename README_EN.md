@@ -1,190 +1,50 @@
-# 🏛️ CoDIR IA v16.3.3.22
+# CoDIR IA v17.0
 
-**Your Board of Directors, augmented by Artificial Intelligence**
+**Software:** CoDIR IA v17.0 — build `v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65`  
+**Documentation revision:** 18 October 2026  
+**Use:** supervised professional use
 
-CoDIR IA simulates a complete board of directors with 4 specialized functions, each driven by a different AI model:
+> **Language:** the interface is chosen on the welcome screen at launch (Français / English); the language of the documents is chosen separately in the brief — an English interface can produce French documents and vice versa. Version française : [README.md](README.md).
 
-- 🎯 **Strategy** — Strategic analysis and recommendations
-- 📢 **Marketing** — Operational marketing plan and KPIs
-- 💰 **Finance** — Financial projections and French tax considerations
-- 👔 **General Management** — Synthesis, decisions, T0→T+90d roadmap
+CoDIR IA prepares an on-demand management committee for consultants, interim managers and SME/industrial SME/mid-cap executives, using the selected brief and documents. The long Word report carries the analysis; the short Word synthesis presents conclusions and matters for decision. They are the two main deliverables, to be reviewed and validated by the professional. The PPTX is an editable draft to complete after reading the Word documents: selection, messages, illustrations and layout remain the professional’s work. Local case history supports continuity between meetings; it does not replace approved minutes or human validation.
 
----
+## At a glance
 
-## 📋 Table of Contents
+- **Committee preparation by function**: Strategy, Finance (with a second opinion), Marketing, Sales, Supply chain (with a challenger) and General management, then a synthesis of the decisions to make.
+- **Four outputs**: the Word minutes, the Word summary, an editable PowerPoint draft and the full package (control files, registers, diagnostics).
+- **Keep and flag**: a doubtful figure or passage is delivered and flagged in place, with its reason (« ⚠ to verify — … »); exceptions: personal calculations are removed and, without primary financial statements, a one-person company or a very short Finance note receives a prudence frame. The annotations themselves must be reviewed.
+- **Memory from one session to the next**: an action register, and statuses you declare in the brief (completed, postponed, dropped, kept, board decision), applied from that session; those that do not find their action are listed in the minutes.
+- **Published facts** taken from official registers when available (SEC/EDGAR, Pappers, Companies House, GLEIF).
+- **A twelve-step progress screen** during processing, then a « Package ready » screen.
 
-1. [Quick Start](#-quick-start)
-2. [API Key Configuration](#-api-key-configuration)
-3. [Usage](#-usage)
-4. [PowerPoint Export](#-powerpoint-export)
-5. [File Attachments](#-file-attachments)
-6. [Troubleshooting](#-troubleshooting)
-7. [Security & Privacy](#-security--privacy)
+## Requirements
 
----
+64-bit Windows 10/11 on Intel/AMD PCs, Windows 11 on ARM PCs, or macOS on Apple silicon Macs (M1 and later); Python 3.11 to 3.14 on Windows, 3.11 to 3.13 on macOS (the launcher checks the version; on an ARM PC running Windows 11 it uses an x64 Python run by Windows emulation, and installs it if needed); Intel Macs, 32-bit Windows and Windows 10 on ARM PCs are not supported by this version; API keys for the AI providers you enable (the table of roles and models is in the installation guide); optionally, an identifier for public registers. CoDIR IA does not decide for you: every deliverable must be reviewed and validated before distribution.
 
-## 🚀 Quick Start
+## Start
 
-### Windows
+Verify the external ZIP hash, extract to a local folder and check `SHA256SUMS`. Windows: `DEMARRER_CODIR_IA.bat`. macOS: `Demarrer_Mac.command`. Read the installation guide before allowing unsigned scripts. Do not disable device protection globally.
 
-1. Download and extract the ZIP
-2. Double-click `setup_windows.bat`
-3. The application opens automatically in your browser
+**First launch (application not signed in v17.0, signing planned for v18).** Windows: before extracting, right-click the zip > Properties > tick « Unblock » > OK — the first double-click then installs and launches; otherwise, when SmartScreen appears: « More info » > « Run anyway ». macOS: right-click `Demarrer_Mac.command` > Open, or System Settings > Privacy & Security > Open Anyway.
 
-### macOS
+## Where to find information
 
-1. Download and extract the ZIP
-2. Double-click `CoDIR IA.app` *(recommended)*
-3. If macOS blocks it: System Settings > Privacy & Security > **Open Anyway**
+| Need | Document |
+|---|---|
+| Reading path and history | [Read the documentation](Documentation/READ_THE_DOCUMENTATION_EN.md) |
+| Installation/use FR and EN | `Documentation/1 - Manuels d'utilisation/` |
+| Current changes and limitations | [Release notes](RELEASE_NOTES_EN.md) |
+| Terms, privacy, providers | `Documentation/2 - Conditions et confidentialite/` |
+| Security, AI Act, SBOM | `Documentation/3 - Securite et conformite/` |
+| Status of this documentation package | [Documentation status](Documentation/ETAT_DOCUMENTAIRE.md) |
+| Français | [README français](README.md) |
 
-Alternative (opens Terminal): double-click `CoDIR-IA.command`
+## Licence, data and status
 
-### Manual Installation
+Source-available **FSL-1.1-ALv2** code: `application/LICENSE`. Trademark/logo: `application/TRADEMARKS.md`. Permitted professional use and handover of outputs under the Terms do not, in themselves, require additional publisher authorisation.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate      # macOS/Linux
-# or: .venv\Scripts\activate   # Windows
-pip install -r requirements.txt
-streamlit run app.py
-```
+Local does not mean offline. The interface, storage and guards run on the computer; enabled AI providers, registries and searches receive content needed by their functions. The guards are neither anonymisation nor a firewall before transmission. The brief, excerpts and, depending on submitted context, history items may leave the computer. Check your rights and provider accounts before running.
 
-**Requirements**: Python 3.10 or higher · At least one API key
+English remains a preview. Deterministic guards reduce some risks without guaranteeing accuracy or completeness. Controls and counters do not replace human review or the cumulative release gate. The publisher’s release decision is an act outside this archive; the published version is identified by its SHA-256 fingerprint in the release notes.
 
----
-
-## 🔑 API Key Configuration
-
-On first launch, a dialog box prompts you to enter your keys.
-
-You can also access the **Configuration** page from the sidebar:
-
-| Provider | Variable | Get a key |
-|----------|----------|-----------|
-| OpenAI   | `OPENAI_API_KEY` | [platform.openai.com](https://platform.openai.com) |
-| Anthropic | `ANTHROPIC_API_KEY` | [console.anthropic.com](https://console.anthropic.com) |
-| Google | `GOOGLE_API_KEY` | [aistudio.google.com](https://aistudio.google.com) |
-| Mistral | `MISTRAL_API_KEY` | [console.mistral.ai](https://console.mistral.ai) |
-
-> ⚠️ **Security**: keys are stored in `secrets.json` *outside the repo*. Never share them.
-
----
-
-## 🖥️ Usage
-
-### CoDIR Session (main mode)
-
-1. Click **Session CoDIR** in the sidebar
-2. Write your **executive brief** (context, stakes, decisions expected)
-3. Add optional **attachments** (PDF, DOCX, XLSX, CSV…)
-4. Check **Generate PowerPoint** if you want a PPT export
-5. Click **🚀 Launch CoDIR IA session**
-6. Download the **meeting report (.docx)** and/or **summary (.pptx)**
-
-### Free Mode
-
-Compare responses from multiple AIs on the same prompt — useful for benchmarking models or exploring creative angles.
-
-### Session Parameters
-
-| Parameter | Values | Usage |
-|-----------|--------|-------|
-| Mode | Economy / Balanced / Quality | Adjusts temperature and tokens |
-| Temperature | 0.0 → 1.0 | Response creativity |
-| Max tokens | 256 → 8000 | Response length |
-
----
-
-## 📊 PowerPoint Export
-
-### How to get it
-
-Check **"Generate PowerPoint"** before launching the session.
-
-### Module architecture (`utils/pptx_export.py`)
-
-This is the **core module** called by `app.py`. It works in 3 steps:
-
-1. **Cleaning** the meeting report text (technical noise removal)
-2. **AI call** (active provider) → structured strict JSON generation
-3. **python-pptx rendering** → professional `.pptx` file
-
-The module includes a robustness mechanism: if the AI JSON is invalid, it attempts up to 3 automatic repairs, then falls back to a local heuristic extraction of the report.
-
-### Format v16.3.3.22
-
-The generated PowerPoint contains **5 to 10 slides** (adaptive based on report richness):
-
-| # | Slide | Content |
-|---|-------|---------|
-| 1 | **Title** | Deck name · Topic · Date · Version |
-| 2 | **Context & objectives** | Brief summary + key recommendation |
-| 3–8 | **Topic slides** | 1 theme per slide, 3–5 bullets |
-| Last | **Action plan** | 1 decision per function: Strategy · Marketing · Finance · CEO |
-
-**Design**:
-- **Navy / Gold** palette (#1E2761 / #E8B84B)
-- Title and action plan slides: dark Navy background
-- Content slides: light gray background, Navy header, white card
-- Numbered bullets, color accents per theme (Teal · Blue · Green · Orange · Red · Gold)
-- **No technical noise** (tokens, provider, diagnostics automatically filtered)
-
-> **Note**: an experimental module `pptx_from_cr.py` (specialized market/SWOT/roadmap schema)
-> is available in `experimental/` for future advanced use. It is not used by the application.
-## 📎 File Attachments
-
-**Supported formats**: PDF · DOCX · PPTX · XLSX · XLSM · CSV · TXT · MD
-
-**Limits**: 5 files max · 25 MB total
-
-Content is extracted, cleaned and injected into the **Strategy** prompt as factual context.
-
----
-
-## 🔧 Troubleshooting
-
-### App won't start (Windows)
-
-```batch
-.venv\Scripts\activate
-python -m streamlit run app.py
-```
-
-Check the log: `outputs\setup_windows.log`
-
-### App won't start (macOS)
-
-```bash
-source .venv/bin/activate
-python -m streamlit run app.py
-```
-
-Check the log: `outputs/setup_macos.log`
-
-### "No API key" error
-
-Go to **Configuration**, enter at least one key and click **Test**.
-
-### PPT is empty or contains technical noise
-
-- Ensure the meeting report was generated before the PPT export
-- Increase **Max output tokens** (2000+) in session settings
-- Check `outputs/pptx_attempts_<date>.json` for detailed error info
-
-### Rate limit / provider timeout
-
-The system automatically switches to the next available provider.
-Check **AI Diagnostics** in the interface for details.
-
----
-
-## 🔒 Security & Privacy
-
-- API keys are stored in `~/.codir_ia/secrets.json` (outside repo, ignored by `.gitignore`)
-- The application runs **locally** — no data transmitted except to selected AI APIs
-- Attachments are **not saved** to disk
-- See [PRIVACY.md](PRIVACY.md) for the full privacy policy
-
----
-
-*CoDIR IA v16.3.3.22 — © 2025-2026 Robin Sauzet / HiGestion*
+Reporting: **security@vauquigneux.com**, subject `[SECURITY CoDIR IA]`. No secrets or client documents in the first message. See `SECURITY.md` at the root and `Documentation/3 - Securite et conformite/SECURITY_EN.md`.

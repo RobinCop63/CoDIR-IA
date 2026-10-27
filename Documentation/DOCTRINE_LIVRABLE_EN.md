@@ -1,0 +1,27 @@
+# Deliverable doctrine — CoDIR IA
+
+**Software:** CoDIR IA v17.0 — build `v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65`  
+**Documentation revision:** 18 October 2026  
+**Use:** supervised professional use
+
+CoDIR IA prepares an on-demand management committee for consultants, interim managers and SME/industrial SME/mid-cap executives, using the selected brief and documents. The long Word report carries the analysis; the short Word synthesis presents conclusions and matters for decision. They are the two main deliverables, to be reviewed and validated by the professional. The PPTX is an editable draft to complete after reading the Word documents: selection, messages, illustrations and layout remain the professional’s work. Local case history supports continuity between meetings; it does not replace approved minutes or human validation.
+
+## Three functions, two levels of finish
+
+| Document | Purpose and expected maturity |
+|---|---|
+| Long Word report | Main structured analysis, distinct facts and assumptions, reviewable options and limitations. |
+| Short Word synthesis | Faithful synthesis, priorities and decisions to prepare, with no newly asserted unsupported fact. |
+| PPTX | Non-exhaustive presentation draft; the professional selects, adds and designs after reading Word. |
+
+Facts, assumptions and scenarios. A number found in a source may be a budget or target: being sourced does not turn it into an actual. Admitted scenarios should remain complete, readable and visibly qualified; consult the available register and diagnostics for withheld scenarios, without presuming exhaustive coverage. The product may still produce excessive qualification (false alarms): inspect tables and text as delivered, without arbitrarily filling missing values. A retained scenario is neither a certified forecast nor an approved decision. A target written in the brief and quoted as a target stays as written in the body; it is flagged once, at the top of the brief section (“management’s declarations, not certified by a document”), and in the register. A target put forward by an agent without a document stays in place, highlighted and followed by “⚠ to verify — target without supporting document”.
+
+Deterministic guards. After model generation, local Python rules examine text and structured data. No model is called to make decisions within these guards. Doctrine “deliver everything, flag in place”: the principle is to keep. An unsupported quantity stays where it is, highlighted and followed by “⚠ to verify — reason”; a figure contradicted by a document carries the document’s value; the first-page box counts and lists the flagged passages, and the register records them. Current exceptions: personal calculations (remuneration, dividends, self-employed status) are removed; without primary financial statements for the perimeter, the Finance note of a one-person company (SASU, EURL, sole trader) or a very short note is replaced by a prudence frame; some accounting wordings receive a standard reservation, which must itself be checked against the documents. Only a technical failure prevents delivery. These checks reduce some risks; they guarantee neither error-free results, completeness nor a complete trace of every transformation. Legitimate content may be over-labelled or masked; incorrect content may escape detection. Review the Word documents and compare reservations, registers and sources before use.
+
+Reading the package. Start with the Word synthesis, then the long report and its sources; prepare the PPTX afterwards. diagnostics_ia.csv and diagnostic_A1_RUN-*.json describe execution; JSON/CSV registers and the preparation journal support review. CONTROLE_LIVRAISON.json, when generated, compares objects to written files: missing, altered, lost attribute, truncated, unreadable. controle_pptx_*.json describes deck-specific checks. Zero detected issues does not guarantee correctness. Since 9.4.48, its alerts concern the Word documents: an object missing from every document; an object altered, truncated without a pointer, or stripped of its owner, deadline or status in a Word document. Deck gaps and empty role slides are recorded for information (deck_information block) and displayed as such. A draft may be incomplete, but not misleading.
+
+Memory between meetings. The code includes local case history and a timestamped action register. Reuse the same case — the same “Dossier label” from one meeting to the next — and check the entity, identifier, data directory and analysis date. State genuinely approved decisions, completed or deferred actions and explicit closures in the next brief. Then review carried-over items and changes: repetition does not approve a proposal. Retrospective/future modes do not write to the live register; the “Start fresh — ignore this folder’s history” box (technical variable CODIR_IGNORE_HISTORY) disables carry-over for an isolated test. This documentation revision does not certify exhaustive decision, action and question continuity across two meetings; verify it for your case. This is not memory of all conversations or model training.
+
+## Historical reference
+
+The v62.7 presentation contract and strict-QA specifications are retained as history in the full package. They do not require a perfect, exhaustive or ready-to-present deck. A graphic imperfection is not treated as a false fact. Statements that are retained still need to be faithful.

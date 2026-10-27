@@ -1,0 +1,642 @@
+{
+ "_comment": "Base de connaissances publique nom→secteur (enseignes et groupes notoires). Données, pas de logique : le détecteur la charge telle quelle.",
+ "_schema_version": "1.0",
+ "_schema": "Chaque entrée de patterns est un tuple positionnel de 6 champs : [0] regex de détection (insensible à la casse, appliquée au nom d'entreprise normalisé), [1] identifiant de secteur (snake_case, vocabulaire produit), [2] niveau de confiance (high|medium|low), [3] description publique de la source du rapprochement, [4] booléen — le pattern peut déclencher seul, [5] booléen — le pattern participe aux recoupements.",
+ "_provenance": "Connaissance publique notoire (enseignes, groupes cotés ou de notoriété générale). Aucune donnée d'identification (SIREN, Company Number, adresse) ni donnée de dossier client : le registre est neutre par contrat — test de neutralité automatisé dans tests/test_config_governance.py.",
+ "_governance": "Toute évolution passe par revue du test de neutralité ; version incrémentée à chaque ajout/retrait de pattern (contre-audit 29/08/2026, P2-02).",
+ "_version": "2026-08-29",
+ "patterns": [
+  [
+   "\\baudika\\b",
+   "distribution_sante",
+   "high",
+   "Audika — réseau audioprothèses (filiale du groupe danois Demant)",
+   true,
+   true
+  ],
+  [
+   "\\bamplifon\\b",
+   "distribution_sante",
+   "high",
+   "Amplifon — leader mondial audioprothèses",
+   true,
+   true
+  ],
+  [
+   "\\baudio[\\s_-]?2000\\b",
+   "distribution_sante",
+   "high",
+   "Audio 2000 — enseigne audioprothèses",
+   true,
+   true
+  ],
+  [
+   "\\bentendre\\b",
+   "distribution_sante",
+   "medium",
+   "Entendre — enseigne audioprothèses (présomption)",
+   true,
+   true
+  ],
+  [
+   "\\bkrys\\b",
+   "distribution_optique",
+   "high",
+   "Krys — réseau opticiens (coopérative)",
+   true,
+   true
+  ],
+  [
+   "\\boptic[\\s_-]?2000\\b",
+   "distribution_optique",
+   "high",
+   "Optic 2000 — réseau opticiens (coopérative)",
+   true,
+   true
+  ],
+  [
+   "\\batol\\b",
+   "distribution_optique",
+   "high",
+   "Atol — réseau opticiens (coopérative)",
+   true,
+   true
+  ],
+  [
+   "\\bgrandvision\\b",
+   "distribution_optique",
+   "high",
+   "GrandVision — opticien (filiale EssilorLuxottica)",
+   true,
+   true
+  ],
+  [
+   "\\balain\\s+afflelou\\b",
+   "distribution_optique",
+   "high",
+   "Alain Afflelou — réseau opticiens",
+   true,
+   true
+  ],
+  [
+   "\\bafflelou\\b",
+   "distribution_optique",
+   "high",
+   "Afflelou — réseau opticiens",
+   true,
+   true
+  ],
+  [
+   "\\bgenerale\\s+d['\\s]*optique\\b",
+   "distribution_optique",
+   "high",
+   "Générale d'Optique — réseau opticiens (filiale GrandVision)",
+   true,
+   true
+  ],
+  [
+   "\\bessilor(?:luxottica)?\\b",
+   "industrie_optique",
+   "high",
+   "EssilorLuxottica — industriel verres + montures (production)",
+   true,
+   false
+  ],
+  [
+   "\\bpharmagest\\b",
+   "distribution_pharma",
+   "high",
+   "Pharmagest — logiciels et services pharmacies",
+   true,
+   false
+  ],
+  [
+   "\\bpharmavie\\b",
+   "distribution_pharma",
+   "high",
+   "Pharmavie — réseau pharmacies",
+   true,
+   true
+  ],
+  [
+   "\\bgalien\\b",
+   "distribution_pharma",
+   "low",
+   "Galien — usage variable (présomption faible)",
+   false,
+   false
+  ],
+  [
+   "\\bsephora\\b",
+   "distribution_cosmetique",
+   "high",
+   "Sephora — distribution cosmétique sélective (LVMH)",
+   true,
+   true
+  ],
+  [
+   "\\bmarionnaud\\b",
+   "distribution_cosmetique",
+   "high",
+   "Marionnaud — distribution cosmétique sélective (AS Watson)",
+   true,
+   true
+  ],
+  [
+   "\\bnocibe\\b",
+   "distribution_cosmetique",
+   "high",
+   "Nocibé — distribution parfumerie/cosmétique",
+   true,
+   true
+  ],
+  [
+   "\\bbeauty\\s+success\\b",
+   "distribution_cosmetique",
+   "high",
+   "Beauty Success — distribution parfumerie",
+   true,
+   true
+  ],
+  [
+   "\\bl['\\s]*oreal\\b",
+   "industrie_cosmetique",
+   "high",
+   "L'Oréal — industriel cosmétique (production + distribution)",
+   true,
+   false
+  ],
+  [
+   "\\bclarins\\b",
+   "industrie_cosmetique",
+   "high",
+   "Clarins — industriel cosmétique",
+   true,
+   false
+  ],
+  [
+   "\\bcarrefour\\b",
+   "retail_food",
+   "high",
+   "Carrefour — GMS (hypermarchés/supermarchés)",
+   true,
+   true
+  ],
+  [
+   "\\bauchan\\b",
+   "retail_food",
+   "high",
+   "Auchan — GMS",
+   true,
+   true
+  ],
+  [
+   "\\bleclerc\\b",
+   "retail_food",
+   "high",
+   "Leclerc (E.Leclerc) — GMS coopérative",
+   true,
+   true
+  ],
+  [
+   "\\bintermarche\\b",
+   "retail_food",
+   "high",
+   "Intermarché — GMS coopérative (Les Mousquetaires)",
+   true,
+   true
+  ],
+  [
+   "\\bsuper[\\s_-]?u\\b",
+   "retail_food",
+   "high",
+   "Super U / Système U — GMS coopérative",
+   true,
+   true
+  ],
+  [
+   "\\bmonoprix\\b",
+   "retail_food",
+   "high",
+   "Monoprix — distribution urbaine (Casino)",
+   true,
+   true
+  ],
+  [
+   "\\bfranprix\\b",
+   "retail_food",
+   "high",
+   "Franprix — distribution urbaine (Casino)",
+   true,
+   true
+  ],
+  [
+   "\\bcasino\\b(?!.*hotel)",
+   "retail_food",
+   "medium",
+   "Casino — distribution (présomption, faux positifs possibles avec établissements de jeu)",
+   true,
+   true
+  ],
+  [
+   "\\blidl\\b",
+   "retail_food",
+   "high",
+   "Lidl — discounter alimentaire",
+   true,
+   true
+  ],
+  [
+   "\\baldi\\b",
+   "retail_food",
+   "high",
+   "Aldi — discounter alimentaire",
+   true,
+   true
+  ],
+  [
+   "\\bpicard\\b",
+   "retail_food",
+   "high",
+   "Picard — distribution produits surgelés",
+   true,
+   true
+  ],
+  [
+   "\\bboulanger\\b",
+   "distribution_electromenager",
+   "high",
+   "Boulanger — distribution électroménager/multimédia (HTM)",
+   true,
+   true
+  ],
+  [
+   "\\bdarty\\b",
+   "distribution_electromenager",
+   "high",
+   "Darty — distribution électroménager (Fnac Darty)",
+   true,
+   true
+  ],
+  [
+   "\\bfnac\\b",
+   "distribution_culture_tech",
+   "high",
+   "Fnac — distribution culture/tech (Fnac Darty)",
+   true,
+   true
+  ],
+  [
+   "\\bconforama\\b",
+   "distribution_ameublement",
+   "high",
+   "Conforama — distribution ameublement",
+   true,
+   true
+  ],
+  [
+   "\\bbut\\b\\s+(?:france|sa|group)",
+   "distribution_ameublement",
+   "high",
+   "BUT — distribution ameublement",
+   true,
+   true
+  ],
+  [
+   "\\bikea\\b",
+   "distribution_ameublement",
+   "high",
+   "IKEA — distribution ameublement",
+   true,
+   true
+  ],
+  [
+   "\\bcastorama\\b",
+   "distribution_bricolage",
+   "high",
+   "Castorama — distribution bricolage (Kingfisher)",
+   true,
+   true
+  ],
+  [
+   "\\bleroy\\s+merlin\\b",
+   "distribution_bricolage",
+   "high",
+   "Leroy Merlin — distribution bricolage (Adeo)",
+   true,
+   true
+  ],
+  [
+   "\\bbricoman\\b",
+   "distribution_bricolage",
+   "high",
+   "Bricoman — distribution bricolage pro (Adeo)",
+   true,
+   true
+  ],
+  [
+   "\\bbrico\\s+depot\\b",
+   "distribution_bricolage",
+   "high",
+   "Brico Dépôt — distribution bricolage (Kingfisher)",
+   true,
+   true
+  ],
+  [
+   "\\bzara\\b",
+   "distribution_mode",
+   "high",
+   "Zara — mode (Inditex)",
+   true,
+   true
+  ],
+  [
+   "\\bh\\s*&\\s*m\\b|\\bh\\s+et\\s+m\\b",
+   "distribution_mode",
+   "high",
+   "H&M — mode (fast fashion)",
+   true,
+   true
+  ],
+  [
+   "\\buniqlo\\b",
+   "distribution_mode",
+   "high",
+   "Uniqlo — mode (Fast Retailing)",
+   true,
+   true
+  ],
+  [
+   "\\bkiabi\\b",
+   "distribution_mode",
+   "high",
+   "Kiabi — mode discount",
+   true,
+   true
+  ],
+  [
+   "\\bcelio\\b",
+   "distribution_mode",
+   "high",
+   "Celio — mode masculine",
+   true,
+   true
+  ],
+  [
+   "\\bjules\\b",
+   "distribution_mode",
+   "medium",
+   "Jules — mode masculine (présomption)",
+   true,
+   true
+  ],
+  [
+   "\\bdecathlon\\b",
+   "distribution_sport",
+   "high",
+   "Decathlon — distribution articles sport",
+   true,
+   true
+  ],
+  [
+   "\\bintersport\\b",
+   "distribution_sport",
+   "high",
+   "Intersport — distribution articles sport",
+   true,
+   true
+  ],
+  [
+   "\\bgo\\s+sport\\b",
+   "distribution_sport",
+   "high",
+   "Go Sport — distribution articles sport",
+   true,
+   true
+  ],
+  [
+   "\\blvmh\\b",
+   "luxury",
+   "high",
+   "LVMH — groupe luxe diversifié",
+   true,
+   false
+  ],
+  [
+   "\\bhermes\\b",
+   "luxury",
+   "high",
+   "Hermès — maison de luxe (cuir/mode)",
+   true,
+   false
+  ],
+  [
+   "\\bkering\\b",
+   "luxury",
+   "high",
+   "Kering — groupe luxe (Gucci, Saint Laurent…)",
+   true,
+   false
+  ],
+  [
+   "\\bchanel\\b",
+   "luxury",
+   "high",
+   "Chanel — maison de luxe (mode/parfums)",
+   true,
+   false
+  ],
+  [
+   "\\bdior\\b",
+   "luxury",
+   "high",
+   "Dior — maison de luxe (LVMH)",
+   true,
+   false
+  ],
+  [
+   "\\bcartier\\b",
+   "luxury",
+   "high",
+   "Cartier — joaillerie luxe (Richemont)",
+   true,
+   false
+  ],
+  [
+   "\\bburberry\\b",
+   "luxury",
+   "high",
+   "Burberry — maison de luxe britannique",
+   true,
+   false
+  ],
+  [
+   "\\bmcdonald['\\s]*s\\b",
+   "restauration_rapide",
+   "high",
+   "McDonald's — restauration rapide",
+   true,
+   true
+  ],
+  [
+   "\\bburger\\s+king\\b",
+   "restauration_rapide",
+   "high",
+   "Burger King — restauration rapide",
+   true,
+   true
+  ],
+  [
+   "\\bkfc\\b",
+   "restauration_rapide",
+   "high",
+   "KFC — restauration rapide (Yum! Brands)",
+   true,
+   true
+  ],
+  [
+   "\\bquick\\b",
+   "restauration_rapide",
+   "medium",
+   "Quick — restauration rapide (intégré Burger King France)",
+   true,
+   true
+  ],
+  [
+   "\\bsubway\\b",
+   "restauration_rapide",
+   "high",
+   "Subway — restauration rapide sandwiches",
+   true,
+   true
+  ],
+  [
+   "\\bstarbucks\\b",
+   "restauration_rapide",
+   "high",
+   "Starbucks — café/snacking",
+   true,
+   true
+  ],
+  [
+   "\\bpaul\\b\\s+(?:sa|france|boulangerie)",
+   "restauration_rapide",
+   "high",
+   "Paul — boulangerie/snacking",
+   true,
+   true
+  ],
+  [
+   "\\bbrioche\\s+doree\\b",
+   "restauration_rapide",
+   "high",
+   "Brioche Dorée — boulangerie/snacking",
+   true,
+   true
+  ],
+  [
+   "\\bvinci\\b",
+   "btp",
+   "high",
+   "Vinci — BTP/concessions",
+   true,
+   false
+  ],
+  [
+   "\\bbouygues\\b",
+   "btp_telecom",
+   "high",
+   "Bouygues — BTP/télécoms/médias (groupe diversifié)",
+   true,
+   false
+  ],
+  [
+   "\\beiffage\\b",
+   "btp",
+   "high",
+   "Eiffage — BTP/concessions",
+   true,
+   false
+  ],
+  [
+   "\\bspie\\b",
+   "btp_services",
+   "high",
+   "Spie — services multi-techniques BTP/industrie",
+   true,
+   false
+  ],
+  [
+   "\\btotalenergies\\b",
+   "energie",
+   "high",
+   "TotalEnergies — énergie/pétrole/renouvelables",
+   true,
+   false
+  ],
+  [
+   "\\bengie\\b",
+   "energie",
+   "high",
+   "Engie — énergie multi-utility",
+   true,
+   false
+  ],
+  [
+   "\\bedf\\b",
+   "energie",
+   "high",
+   "EDF — production/distribution électricité",
+   true,
+   false
+  ],
+  [
+   "\\brenault\\b",
+   "automobile_production",
+   "high",
+   "Renault — constructeur automobile",
+   true,
+   false
+  ],
+  [
+   "\\bstellantis\\b",
+   "automobile_production",
+   "high",
+   "Stellantis — constructeur automobile (Peugeot, Citroën, Fiat…)",
+   true,
+   false
+  ],
+  [
+   "\\bpsa\\b",
+   "automobile_production",
+   "medium",
+   "PSA — ancien constructeur (intégré Stellantis depuis 2021)",
+   true,
+   false
+  ],
+  [
+   "\\bairbus\\b",
+   "aeronautique",
+   "high",
+   "Airbus — aéronautique (production)",
+   true,
+   false
+  ],
+  [
+   "\\bsafran\\b",
+   "aeronautique",
+   "high",
+   "Safran — équipementier aéronautique",
+   true,
+   false
+  ],
+  [
+   "\\bdassault\\b",
+   "aeronautique_defense",
+   "high",
+   "Dassault — aéronautique/défense",
+   true,
+   false
+  ]
+ ]
+}

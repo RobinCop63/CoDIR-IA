@@ -1,2 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# CoDIR IA — aucun fichier n'est converti par Git (fins de ligne, encodage) : les octets du dépôt restent identiques
+# à ceux de l'archive publiée, et le contrôle d'intégrité des lanceurs (SHA256SUMS) passe aussi sur un clone.
+# CoDIR IA — Git never converts any file (line endings, encoding): repository bytes stay identical to the published
+# archive, so the launchers' integrity check (SHA256SUMS) also passes on a clone.
+* -text

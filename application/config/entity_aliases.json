@@ -1,0 +1,4 @@
+{
+  "_comment": "Alias d'entités du dossier (filiales, marques internes) fournis par l'utilisateur ou le brief. Vide par défaut : le produit ne code aucun dossier. Exemple: [\"Filiale A\", \"Filiale B\"].",
+  "entity_aliases": []
+}

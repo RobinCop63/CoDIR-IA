@@ -1,0 +1,5 @@
+{
+  "_comment": "Healthcheck de connectivité Companies House. L'opérateur renseigne ici un numéro de société public et stable de SON choix (donnée d'exploitation, jamais distribuée). Vide = healthcheck désactivé — valeur par défaut de la distribution : aucun numéro de dossier n'est embarqué (doctrine zéro hardcoding, contre-audit 29/08/2026 P2-01).",
+  "_governance": "Ce fichier est une configuration d'exploitation locale : toute valeur ajoutée ici reste hors dépôt (voir .gitignore de déploiement) et n'entre jamais dans les décisions éditoriales du produit — usage strictement limité au ping de connectivité.",
+  "companies_house_healthcheck_number": ""
+}

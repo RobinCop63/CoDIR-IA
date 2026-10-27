@@ -1,0 +1,43 @@
+# ============================================
+# CoDIR IA v16.5.76 — Dependencies
+# ============================================
+#
+# v16.5.76 Phase 7a (audit sécurité 25 mai 2026, VULN-9 validée ChatGPT) :
+# Ce fichier liste les dépendances DIRECTES avec contraintes de bornes
+# minimales (>=) pour permettre une certaine flexibilité de mise à jour.
+#
+# Pour un déploiement REPRODUCTIBLE (production, audit, CI), utilisez plutôt
+# le fichier `requirements.lock` qui pinne TOUTES les dépendances (directes
+# et transitives) avec des versions exactes (==).
+#
+# Génération du lock :  pip-compile --output-file=requirements.lock requirements.txt
+# Installation lockée : pip install -r requirements.lock
+# Audit CVE :           pip-audit -r requirements.lock
+#
+# Mise à jour du lock : `pip-compile --upgrade --output-file=requirements.lock requirements.txt`
+# (à faire périodiquement après revue des CVE et changelog des libs).
+
+# --- Core Framework ---
+streamlit>=1.32.0
+python-dotenv>=1.0.0
+
+# --- AI Providers ---
+openai>=1.40.0
+google-genai>=1.51.0
+anthropic>=0.34.0
+mistralai>=1.2.0
+
+# --- Document Processing ---
+python-docx>=1.1.0
+python-pptx>=0.6.23
+pdfplumber>=0.10.0
+openpyxl>=3.1.0
+
+# --- Data ---
+pandas>=2.0.0
+
+# --- External Data ---
+requests>=2.31.0        # Pappers API enrichment
+
+# --- Tests (installé automatiquement — pas de config manuelle) ---
+pytest>=7.0.0           # Lancer : pytest tests\test_pappers.py -v

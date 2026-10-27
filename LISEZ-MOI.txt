@@ -1,0 +1,17 @@
+CoDIR IA v17.0 — build v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65
+Usage professionnel supervisé — voir README.md (FR), README_EN.md (EN) et RELEASE_NOTES.md.
+
+1. Vérifiez le SHA-256 EXTERNE du ZIP puis SHA256SUMS après extraction.
+2. Extraire dans un dossier local. N’exécutez jamais CoDIR IA depuis un dossier SYNCHRONISÉ (OneDrive, Google Drive, Dropbox ou iCloud Drive).
+3. Windows : DEMARRER_CODIR_IA.bat ; macOS : Demarrer_Mac.command.
+4. Lire le guide d’installation FR/EN dans Documentation/1 - Manuels d'utilisation.
+5. Lire README.md (FR), README_EN.md (EN), puis les notes de version.
+
+Les deux Word sont les livrables principaux ; le PPTX est une ébauche à compléter.
+Gardes locales déterministes ne veut pas dire logiciel hors ligne ni résultat infaillible.
+Choisir la date d’analyse, le périmètre et le dossier avant tout lancement.
+Les clés restent en clair localement : ne partagez pas secrets.json.
+Les lanceurs ne sont pas signés ; vérifier les avertissements selon le manuel.
+Aucun OCR intégré. Une pièce illisible nécessite une version texte autorisée.
+
+La décision de diffusion de l’éditeur est externe à cette archive.

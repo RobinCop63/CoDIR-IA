@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: CoDIR-IA
+message: "If you use this software in research, please cite this software release."
+type: software
+authors:
+  - family-names: Sauzet
+    given-names: Robin
+version: "v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65"
+date-released: "2026-10-29"
+license: FSL-1.1-ALv2
+repository-code: "https://robinsauzet.com/"
+url: "https://robinsauzet.com/"

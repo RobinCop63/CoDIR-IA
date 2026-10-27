@@ -1,0 +1,12 @@
+CoDIR IA v17.0 — démarrage rapide — build v17.4.3.62.13.9.4.65-M6B-B1.3.62.13.9.4.65
+
+Windows : extraire puis double-cliquer sur DEMARRER_CODIR_IA.bat.
+macOS   : extraire puis double-cliquer sur Demarrer_Mac.command.
+
+Ne lancez pas CoDIR IA depuis un dossier synchronisé ou réseau.
+Consultez les manuels dans Documentation/1 - Manuels d'utilisation.
+Les journaux et réglages vivent dans le dossier de configuration de votre OS, pas dans le ZIP.
+Cette version ne contient pas d'OCR ; les scans sont signalés OCR requis.
+Les deux Word sont les livrables principaux ; le PPTX est une ébauche à compléter après leur lecture.
+Parcours de lecture : Documentation/LIRE_LA_DOCUMENTATION_FR.md (EN : Documentation/READ_THE_DOCUMENTATION_EN.md).
+Les lanceurs .bat et .command ne sont pas signés : vérifiez l'empreinte du ZIP et SHA256SUMS avant de les autoriser.

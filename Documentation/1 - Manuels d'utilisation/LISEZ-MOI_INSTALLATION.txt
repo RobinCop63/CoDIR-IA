@@ -1,0 +1,15 @@
+CoDIR IA v17.0 (build 9.4.65)
+
+FR : ouvrez Guide_Demarrage_Rapide_Installation_FR.docx, puis Manuel_Installation_FR.docx.
+EN : open Quick_Start_Installation_EN.docx, then Manuel_Installation_EN.docx.
+
+Vérifiez le SHA-256 externe du ZIP et SHA256SUMS avant tout lancement.
+Verify the external ZIP SHA-256 and SHA256SUMS before running.
+
+Windows : DEMARRER_CODIR_IA.bat à la racine / at the root.
+macOS : Demarrer_Mac.command à la racine / at the root.
+Scripts non signés / unsigned scripts. Ne désactivez pas globalement les protections.
+Do not disable device security globally. Read the platform-specific INSTALL_* file.
+
+Un repli requirements.txt diffère du verrou et du SBOM : consulter le journal et INSTALL_MODE.txt.
+requirements.txt fallback differs from the lock and SBOM: inspect the log and INSTALL_MODE.txt.
